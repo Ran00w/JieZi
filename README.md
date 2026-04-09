@@ -16,7 +16,7 @@
 
 | Item | Access |
 | --- | --- |
-| 📄 Supplementary Material (PDF) | [**Click to Open**](https://github.com/Ran00w/JieZi/raw/refs/heads/main/docs/supplementary_material.pdf) |
+| 📄 Supplementary Material (PDF) | [**Click to Download**](https://github.com/Ran00w/JieZi/raw/refs/heads/main/docs/supplementary_material.pdf) |
 | 📌 Repo Path | `docs/supplementary_material.pdf` |
 
 ---
