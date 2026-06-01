@@ -1,0 +1,22 @@
+现在请根据上面的评分规则，评测下面这个待评分样本。
+
+[任务名称]
+{{task_name}}
+  
+[任务格式要求]
+{{format_instruction}}
+
+[完整 Ground Truth JSON]
+{{ground_truth_full}}
+
+[Ground Truth 的“历代字形演变”]
+{{ground_truth_evolution}}
+
+[预测的“历代字形演变”]
+{{prediction_evolution}}
+
+请先在内部完成核对，再只输出 JSON：
+{
+  "score": 0,
+  "reason": ""
+}

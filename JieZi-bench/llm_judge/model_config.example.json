@@ -1,0 +1,9 @@
+{
+  "base_url": "https://your-judge-endpoint/v1",
+  "model": "your-judge-model-name",
+  "api_key_env": "JIEZI_JUDGE_API_KEY",
+  "timeout": 300,
+  "max_retries": 2,
+  "retry_backoff_base": 2.0,
+  "retry_backoff_max": 20.0
+}
