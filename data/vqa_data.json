@@ -1,0 +1,548 @@
+{
+  "levels": [
+    {
+      "id": "l1",
+      "name": "Level 1: 基本字形识别",
+      "short_name": "基本识别",
+      "description": "识别古文字对应的现代字头和书体类型",
+      "tasks": [
+        "headword",
+        "script"
+      ],
+      "examples": [
+        {
+          "id": "人_甲骨文_0::vqa::glyph",
+          "image": "images/img_00001.jpg",
+          "character": "人",
+          "script": "甲骨文",
+          "task": "script",
+          "question": "请判断该字的字形类别。",
+          "answer": "甲骨文"
+        },
+        {
+          "id": "人_金文_1::vqa::glyph",
+          "image": "images/img_00002.jpg",
+          "character": "人",
+          "script": "金文",
+          "task": "script",
+          "question": "图中字形属于哪一种书体？",
+          "answer": "金文"
+        },
+        {
+          "id": "口_草书_4::vqa::glyph",
+          "image": "images/img_00003.jpg",
+          "character": "口",
+          "script": "草书",
+          "task": "script",
+          "question": "该图像呈现的是何种字形？",
+          "answer": "草书"
+        },
+        {
+          "id": "口_篆书_2::vqa::glyph",
+          "image": "images/img_00004.jpg",
+          "character": "口",
+          "script": "篆书",
+          "task": "script",
+          "question": "请辨识图中文字所属的书体类型。",
+          "answer": "篆书"
+        },
+        {
+          "id": "山_隶书_3::vqa::glyph",
+          "image": "images/img_00005.jpg",
+          "character": "ɽ",
+          "script": "隶书",
+          "task": "script",
+          "question": "请说明图中文字的字形类别。",
+          "answer": "隶书"
+        },
+        {
+          "id": "山_楷书_5::vqa::glyph",
+          "image": "images/img_00006.png",
+          "character": "ɽ",
+          "script": "楷书",
+          "task": "script",
+          "question": "该图像呈现的是何种字形？",
+          "answer": "楷书"
+        },
+        {
+          "id": "火_甲骨文_0::vqa::glyph",
+          "image": "images/img_00007.jpg",
+          "character": "火",
+          "script": "甲骨文",
+          "task": "script",
+          "question": "请判断图中所示为楷书、隶书、篆书或草书等何种字形。",
+          "answer": "甲骨文"
+        },
+        {
+          "id": "手_甲骨文_0::vqa::glyph",
+          "image": "images/img_00008.jpg",
+          "character": "手",
+          "script": "甲骨文",
+          "task": "script",
+          "question": "此字形应归入哪一类书体？",
+          "answer": "甲骨文"
+        },
+        {
+          "id": "手_金文_1::vqa::glyph",
+          "image": "images/img_00009.jpg",
+          "character": "手",
+          "script": "金文",
+          "task": "script",
+          "question": "图中展示的是哪一种字形？",
+          "answer": "金文"
+        },
+        {
+          "id": "心_草书_4::vqa::glyph",
+          "image": "images/img_00010.jpg",
+          "character": "心",
+          "script": "草书",
+          "task": "script",
+          "question": "图中展示的是哪一种字形？",
+          "answer": "草书"
+        },
+        {
+          "id": "日_篆书_2::vqa::glyph",
+          "image": "images/img_00011.jpg",
+          "character": "日",
+          "script": "篆书",
+          "task": "script",
+          "question": "这张图里的字体类型是什么？",
+          "answer": "篆书"
+        },
+        {
+          "id": "心_隶书_3::vqa::glyph",
+          "image": "images/img_00012.jpg",
+          "character": "心",
+          "script": "隶书",
+          "task": "script",
+          "question": "此字形应归入哪一类书体？",
+          "answer": "隶书"
+        }
+      ]
+    },
+    {
+      "id": "l2",
+      "name": "Level 2: 字形结构分析",
+      "short_name": "结构分析",
+      "description": "分析汉字的形体结构、构件组成与功能",
+      "tasks": [
+        "structure",
+        "components",
+        "function"
+      ],
+      "examples": [
+        {
+          "id": "鬱_甲骨文_0::vqa::components_full",
+          "image": "images/img_00013.jpg",
+          "character": "鬱",
+          "script": "甲骨文",
+          "task": "components",
+          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
+          "answer": "1. 构件人：功能=表意；演变类型=保留；解释=象人形，表示人在林中采集。；2. 构件林：功能=表意；演变类型=保留；解释=象二木并立，表示林木茂盛。"
+        },
+        {
+          "id": "鬱_金文_1::vqa::components_full",
+          "image": "images/img_00014.jpg",
+          "character": "鬱",
+          "script": "金文",
+          "task": "components",
+          "question": "请完整说明该字各构件的功能、演变类型与构字解释。",
+          "answer": "1. 构件木缶木：功能=表意；演变类型=保留；解释=木缶木为可见构件。；2. 构件冖：功能=表意；演变类型=保留；解释=冖为可见构件。；3. 构件鬯彡：功能=表意；演变类型=保留；解释=鬯彡为可见构件。"
+        },
+        {
+          "id": "虎_草书_4::vqa::components_full",
+          "image": "images/img_00015.jpg",
+          "character": "虎",
+          "script": "草书",
+          "task": "components",
+          "question": "请详细列出该字的全部构件，并逐一说明其功能、演变类型及构字解释。",
+          "answer": "1. 构件虍：功能=表意；演变类型=保留；解释=草书将虎头与身躯连笔简化，保留虎口与斑纹特征。；2. 构件几：功能=表意；演变类型=保留；解释=草书将虎足与尾部简化为几字形，象征虎身下部。"
+        },
+        {
+          "id": "水_篆书_2::vqa::components_full",
+          "image": "images/img_00016.jpg",
+          "character": "ˮ",
+          "script": "篆书",
+          "task": "components",
+          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
+          "answer": "1. 构件㇇：功能=表意；演变类型=保留；解释=㇇为可见构件。；2. 构件亅：功能=表意；演变类型=保留；解释=亅为可见构件。；3. 构件乀丿：功能=表意；演变类型=保留；解释=乀丿为可见构件。"
+        },
+        {
+          "id": "鱼_隶书_4::vqa::components_full",
+          "image": "images/img_00017.jpg",
+          "character": "鱼",
+          "script": "隶书",
+          "task": "components",
+          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
+          "answer": "1. 构件⺈：功能=表意；演变类型=讹变；解释=由鱼头及口部讹变而来，隶书中写作⺈形。；2. 构件田：功能=表意；演变类型=讹变；解释=由鱼身及鳞片纹样讹变而来，隶书中整齐化为田形。；3. 构件灬：功能=表意；演变类型=讹变；解释=由鱼尾及鱼鳍讹变而来，隶书中写作四点底。"
+        },
+        {
+          "id": "鱼_楷书_0::vqa::components_full",
+          "image": "images/img_00018.png",
+          "character": "鱼",
+          "script": "楷书",
+          "task": "components",
+          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
+          "answer": "1. 构件⺈：功能=表意；演变类型=简化；解释=由鱼头及口部简化而来，象征鱼头。；2. 构件田：功能=表意；演变类型=简化；解释=由鱼身及鳞片简化而来，象征鱼身。；3. 构件一：功能=表意；演变类型=简化；解释=由鱼尾简化而来，象征鱼尾。"
+        },
+        {
+          "id": "火_甲骨文_0::vqa::components_full",
+          "image": "images/img_00007.jpg",
+          "character": "火",
+          "script": "甲骨文",
+          "task": "components",
+          "question": "请对该字的构形进行拆解释读，列出所有构件并说明其功能、演变与理据。",
+          "answer": "1. 构件火：功能=表意；演变类型=保留；解释=整体象火焰升腾之形，为独体象形。"
+        },
+        {
+          "id": "鹿_甲骨文_0::vqa::components_full",
+          "image": "images/img_00019.jpg",
+          "character": "¹",
+          "script": "甲骨文",
+          "task": "components",
+          "question": "请详细列出该字的全部构件，并逐一说明其功能、演变类型及构字解释。",
+          "answer": "1. 构件整体：功能=表意；演变类型=保留；解释=象头上长有树枝状角的雄鹿之形，上部为角，中部为头身，下部为足。"
+        },
+        {
+          "id": "玉_金文_1::vqa::components_full",
+          "image": "images/img_00020.jpg",
+          "character": "玉",
+          "script": "金文",
+          "task": "components",
+          "question": "请把该字的构件信息完整说出（含每个构件的功能、演变类型、解释）。",
+          "answer": "1. 构件三：功能=表意；演变类型=保留；解释=象三片玉并列之形，表示多玉。；2. 构件丨：功能=表意；演变类型=保留；解释=象贯穿玉片的绳索。"
+        },
+        {
+          "id": "日_草书_4::vqa::components_full",
+          "image": "images/img_00021.jpg",
+          "character": "日",
+          "script": "草书",
+          "task": "components",
+          "question": "请把该字的构件信息完整说出（含每个构件的功能、演变类型、解释）。",
+          "answer": "1. 构件整体：功能=表意；演变类型=简化；解释=草书将楷书方折笔画简化为圆转连笔，左侧竖画与内部横画连写，右侧竖画呈弧形，整体轮廓仍保留太阳之形。"
+        },
+        {
+          "id": "手_篆书_2::vqa::components_full",
+          "image": "images/img_00022.jpg",
+          "character": "手",
+          "script": "篆书",
+          "task": "components",
+          "question": "请从构件分析的角度，完整说明该字各组成部分的功能、演变类型与文字学解释。",
+          "answer": "1. 构件戌：功能=表意；演变类型=保留；解释=象斧钺类兵器，在此表示武力或威慑。；2. 构件口：功能=表意；演变类型=保留；解释=象人口，在此表示众口齐声。"
+        },
+        {
+          "id": "鹿_隶书_3::vqa::components_full",
+          "image": "images/img_00023.jpg",
+          "character": "¹",
+          "script": "隶书",
+          "task": "components",
+          "question": "该字由哪些构件组成？各构件在构字中承担何种功能，经历了怎样的演变？",
+          "answer": "1. 构件广：功能=符号；演变类型=讹变；解释=由甲骨文、金文象形的鹿头与鹿角部分讹变而来，隶变后写作广字头。；2. 构件比：功能=符号；演变类型=讹变；解释=由象形的鹿身、鹿腿及尾部线条讹变、简化而来，隶变后写作比。"
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "name": "Level 3: 字义与造字法",
+      "short_name": "字义追溯",
+      "description": "追溯造字本义，判断六书归属",
+      "tasks": [
+        "etymology",
+        "meaning"
+      ],
+      "examples": [
+        {
+          "id": "鹿_甲骨文_0::vqa::benyi",
+          "image": "images/img_00019.jpg",
+          "character": "¹",
+          "script": "甲骨文",
+          "task": "meaning",
+          "question": "该字的字源本义是什么？",
+          "answer": "一种温顺的哺乳动物，四肢细长，尾短，毛黄褐色，有的有花斑或条纹"
+        },
+        {
+          "id": "心_金文_1::vqa::benyi",
+          "image": "images/img_00024.jpg",
+          "character": "心",
+          "script": "金文",
+          "task": "meaning",
+          "question": "该字的字源本义是什么？",
+          "answer": "中医病症名,即腹中癖块:妇人脐之两旁有筋突起疼痛,大者如臂,小者如指,状类弓弦者,名曰心"
+        },
+        {
+          "id": "鹿_草书_4::vqa::benyi",
+          "image": "images/img_00025.jpg",
+          "character": "¹",
+          "script": "草书",
+          "task": "meaning",
+          "question": "该字的字源本义是什么？",
+          "answer": "一种温顺的哺乳动物，四肢细长，尾短，毛黄褐色，有的有花斑或条纹"
+        },
+        {
+          "id": "心_篆书_2::vqa::benyi",
+          "image": "images/img_00026.jpg",
+          "character": "心",
+          "script": "篆书",
+          "task": "meaning",
+          "question": "请回答该字最初的本义。",
+          "answer": "中医病症名,即腹中癖块:妇人脐之两旁有筋突起疼痛,大者如臂,小者如指,状类弓弦者,名曰心"
+        },
+        {
+          "id": "人_隶书_3::vqa::benyi",
+          "image": "images/img_00027.jpg",
+          "character": "人",
+          "script": "隶书",
+          "task": "meaning",
+          "question": "请追溯该字在造字之初的本义。",
+          "answer": "能制造并使用工具进行劳动，又能用语言进行思维和交际的生命"
+        },
+        {
+          "id": "人_楷书_5::vqa::benyi",
+          "image": "images/img_00028.png",
+          "character": "人",
+          "script": "楷书",
+          "task": "meaning",
+          "question": "请说明该字的本义，即其造字时所要表达的核心概念。",
+          "answer": "能制造并使用工具进行劳动,又能用语言进行思维和交际的生命"
+        },
+        {
+          "id": "鬱_甲骨文_0::vqa::zaozifa",
+          "image": "images/img_00013.jpg",
+          "character": "鬱",
+          "script": "甲骨文",
+          "task": "etymology",
+          "question": "该字的结构体现了怎样的造字逻辑？",
+          "answer": "会意字"
+        },
+        {
+          "id": "山_甲骨文_0::vqa::benyi",
+          "image": "images/img_00029.jpg",
+          "character": "ɽ",
+          "script": "甲骨文",
+          "task": "meaning",
+          "question": "依其构形分析，该字的初文意义为何？",
+          "answer": "山峰，地面上由土石构成的巨大而高耸的部分"
+        },
+        {
+          "id": "山_金文_1::vqa::benyi",
+          "image": "images/img_00030.jpg",
+          "character": "ɽ",
+          "script": "金文",
+          "task": "meaning",
+          "question": "这个字的本义是什么？",
+          "answer": "山峰，地面上由土石构成的巨大而高耸的部分"
+        },
+        {
+          "id": "玉_草书_4::vqa::benyi",
+          "image": "images/img_00031.jpg",
+          "character": "玉",
+          "script": "草书",
+          "task": "meaning",
+          "question": "该字的字源本义是什么？",
+          "answer": "玉石，一种细密、温润而有光泽的美石"
+        },
+        {
+          "id": "玉_篆书_2::vqa::benyi",
+          "image": "images/img_00032.jpg",
+          "character": "玉",
+          "script": "篆书",
+          "task": "meaning",
+          "question": "该字在古文字阶段的原始意义是什么？",
+          "answer": "玉石,一种细密、温润而有光泽的美石"
+        },
+        {
+          "id": "月_隶书_2::vqa::benyi",
+          "image": "images/img_00033.jpg",
+          "character": "月",
+          "script": "隶书",
+          "task": "meaning",
+          "question": "这个字的本义是什么？",
+          "answer": "月亮，即月球，古也称太阴"
+        }
+      ]
+    },
+    {
+      "id": "l4",
+      "name": "Level 4: 历时演变分析",
+      "short_name": "演变分析",
+      "description": "梳理汉字从甲骨文到楷书的形体递变过程",
+      "tasks": [
+        "evolution",
+        "analysis"
+      ],
+      "examples": [
+        {
+          "id": "㐭_隶书_3",
+          "image": "images/evo/㐭_main.jpg",
+          "character": "㐭",
+          "script": "隶书",
+          "task": "evolution",
+          "question": "请以专业文字学视角，分析该字的形体构造，并梳理其从造字之初到今日的字形演变历程。",
+          "answer": "【字头与结构】该隶书字形对应之现代字典字头为「㐭」，结构类型为⿱（上下结构），造字法归属象形字。\n\n【构件分解】该字由两个构件组成：\n「亠」承担表意功能，象粮仓的顶部；\n「回」承担表意功能，象粮仓的主体。\n\n【本义】据构形分析，该字初文本义为“容纳谷物的粮仓”。\n\n【字形演变】甲骨文象简易的粮仓之形；金文大同；篆文稍加简省并整齐化；隶变后笔画趋于平直；楷书写作“㐭”。该字是“稟”（禀）、“廩”（廪）的本字。",
+          "stages": [
+            {
+              "script": "甲骨文",
+              "image": "images/evo/㐭_甲骨文.jpg"
+            },
+            {
+              "script": "金文",
+              "image": "images/evo/㐭_金文.jpg"
+            },
+            {
+              "script": "篆书",
+              "image": "images/evo/㐭_篆书.jpg"
+            },
+            {
+              "script": "隶书",
+              "image": "images/evo/㐭_隶书.jpg"
+            },
+            {
+              "script": "楷书",
+              "image": "images/evo/㐭_楷书.png"
+            },
+            {
+              "script": "草书",
+              "image": "images/evo/㐭_草书.jpg"
+            }
+          ]
+        },
+        {
+          "id": "㱃_楷书_7",
+          "image": "images/evo/㱃_main.png",
+          "character": "㱃",
+          "script": "楷书",
+          "task": "evolution",
+          "question": "请从形体构造与历史演变两个角度，对该字进行专业的文字学分析。",
+          "answer": "【字头与结构】该楷书字形对应之现代字典字头为「㱃」，结构类型为⿰（左右结构），造字法归属会意字。\n\n【构件分解】该字由两个构件组成：\n「酓」承担表意功能，由甲骨文中酒坛及口舌之形演变而来，金文中讹变为从今从酉；\n「欠」承担表意功能，由甲骨文中张口伸舌的人形演变而来。\n\n【本义】据构形分析，该字初文本义为“喝”。\n\n【字形演变】甲骨文象一人张口伸舌就坛子饮酒之状；金文中口与舌脱离人形讹为“今”，人形讹变为“欠”；隶变后楷书写作“㱃”。该字是“饮”的初文。",
+          "stages": [
+            {
+              "script": "甲骨文",
+              "image": "images/evo/㱃_甲骨文.jpg"
+            },
+            {
+              "script": "金文",
+              "image": "images/evo/㱃_金文.jpg"
+            },
+            {
+              "script": "篆书",
+              "image": "images/evo/㱃_篆书.jpg"
+            },
+            {
+              "script": "隶书",
+              "image": "images/evo/㱃_隶书.jpg"
+            },
+            {
+              "script": "楷书",
+              "image": "images/evo/㱃_楷书.png"
+            },
+            {
+              "script": "草书",
+              "image": "images/evo/㱃_草书.jpg"
+            }
+          ]
+        },
+        {
+          "id": "冀_篆书_0::vqa::evolution",
+          "image": "images/evo/冀_main.jpg",
+          "character": "冀",
+          "script": "篆书",
+          "task": "evolution",
+          "question": "请概述该字在甲骨文、篆书、隶书、楷书等不同书体阶段的面貌变迁。",
+          "answer": "金文从異从飛会意，異兼表声，本义为恭谨。篆文承接金文整齐化。隶变后楷书分化为𩙺、翼、冀，其中𩙺、翼表翅膀义，冀表地名及希望义。",
+          "stages": [
+            {
+              "script": "金文",
+              "image": "images/evo/冀_金文.jpg"
+            },
+            {
+              "script": "篆书",
+              "image": "images/evo/冀_篆书.jpg"
+            },
+            {
+              "script": "隶书",
+              "image": "images/evo/冀_隶书.jpg"
+            },
+            {
+              "script": "楷书",
+              "image": "images/evo/冀_楷书.png"
+            },
+            {
+              "script": "草书",
+              "image": "images/evo/冀_草书.jpg"
+            }
+          ]
+        },
+        {
+          "id": "鬱_楷书_6::vqa::evolution",
+          "image": "images/img_00072.png",
+          "character": "鬱",
+          "script": "楷书",
+          "task": "evolution",
+          "question": "请描述该字自初文以来各历史阶段字形的传承与变异。",
+          "answer": "甲骨文从二人在林中采集，会林木茂盛之意；金文从林从手持矢，篆文从林从鬱省会意兼形声。隶变后楷书写作鬱，异体作鬰。现代简化字将下部复杂的“鬱”省改为“缶”，形成现行简体字形。",
+          "stages": [
+            {
+              "script": "甲骨文",
+              "image": "images/img_00013.jpg"
+            },
+            {
+              "script": "金文",
+              "image": "images/img_00073.jpg"
+            },
+            {
+              "script": "篆书",
+              "image": "images/img_00074.jpg"
+            },
+            {
+              "script": "隶书",
+              "image": "images/img_00075.jpg"
+            },
+            {
+              "script": "楷书",
+              "image": "images/img_00072.png"
+            },
+            {
+              "script": "草书",
+              "image": "images/img_00076.jpg"
+            }
+          ]
+        },
+        {
+          "id": "䍩_楷书_4::vqa::evolution",
+          "image": "images/evo/䍩_main.png",
+          "character": "䍩",
+          "script": "楷书",
+          "task": "evolution",
+          "question": "该字在汉字发展史上经历了怎样的形体演变？",
+          "answer": "【初文构造】甲骨文由“羊”与“支”构成，会意兼形声。\n\n【字形演变】经过隶变与楷化，右侧的“支”讹变为“攵”，最终形成“䍩”。该字被视为“養”（养）的古字异体。",
+          "stages": [
+            {
+              "script": "甲骨文",
+              "image": "images/evo/䍩_甲骨文.jpg"
+            },
+            {
+              "script": "金文",
+              "image": "images/evo/䍩_金文.jpg"
+            },
+            {
+              "script": "篆书",
+              "image": "images/evo/䍩_篆书.jpg"
+            },
+            {
+              "script": "隶书",
+              "image": "images/evo/䍩_隶书.jpg"
+            },
+            {
+              "script": "楷书",
+              "image": "images/evo/䍩_楷书.png"
+            },
+            {
+              "script": "草书",
+              "image": "images/evo/䍩_草书.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

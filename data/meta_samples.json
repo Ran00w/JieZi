@@ -1,0 +1,468 @@
+[
+  {
+    "character": "并",
+    "script": "篆书",
+    "creation_method": [
+      "会意字"
+    ],
+    "structure": "⿱",
+    "special_structure": "",
+    "components": [
+      {
+        "component": "从",
+        "function": [
+          "表意"
+        ],
+        "explanation": "上部为两个“从”形，象二人相并排站立。"
+      },
+      {
+        "component": "开",
+        "function": [
+          "表意"
+        ],
+        "explanation": "下部原为指事符号“二”，篆书阶段讹变为“开”形。"
+      }
+    ],
+    "original_meaning": "合在一起",
+    "evolution": "甲骨文从二人相并，金文大同。篆书阶段下部讹变为“开”。隶变后楷书写作“并”、“並”、“併”，今简化字统一为“并”。",
+    "pinyin": [
+      "bìng",
+      "bīng",
+      "bàng",
+      "bàn"
+    ],
+    "meaning_chunks": [
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "聚合,合在一起",
+        "notes": "本义",
+        "examples": "冰炭不可以相并兮|六国从亲,专心并力一意,则必无强秦之患|四美具,二难并|未卜何年母子并|三步并作两步|吞并|兼并|合并|并拢"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "排列,挨着,比邻,平列",
+        "notes": "",
+        "examples": "礼之可以为国也久矣,与天地并|行肩而不并,不错则随|是故,并辔争先而不能相夺|我巷南并舍翁昨暮死矣|并踵顶而卧|与汝并肩携手|并肩作战|并蒂莲|并列"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "齐,同,比并",
+        "notes": "",
+        "examples": "乡也混然涂之人也,俄而并乎尧禹,岂不贱而贵矣哉!|行与世异,心与俗并|朕与子并世也|都无色可并,不奈此香何|清辉玉臂,广寒仙子也堪并"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "兼并,吞并,归并,合并",
+        "notes": "",
+        "examples": "(有)囊括四海之意,并吞八荒之心|行将为人所并|将兵与备并力逆操|并力西向|并其职于南京户部|并案办理"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "匹敌",
+        "notes": "",
+        "examples": "其西一石峰,高与此峰并"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "如同,相似",
+        "notes": "",
+        "examples": "是非浑并漆,词讼敢研朱|青油幕里人如玉,黄鹤楼中月并钩"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "名词",
+        "meaning": "兼并的行为",
+        "notes": "",
+        "examples": "抑其兼并"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "副词",
+        "meaning": "否定语气,加强否定",
+        "notes": "用于否定词前",
+        "examples": "古人以问为美德,而并不见其有可耻也|并非推心待慰帅者|他并不知情|我们之间并没有什么隔阂|并非如此|并无怨言"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "副词",
+        "meaning": "同时,一起,竞相",
+        "notes": "表两件以上的事情一齐进行",
+        "examples": "既见君子,并坐鼓瑟|并起而亡秦族矣|腥臊并御,芳不得薄兮|天下淆乱,高皇帝与诸公并起|两狼并驱如故|豪杰并起|相提并论|齐头并进|并行不悖|并驾齐驱|并立|并存"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "副词",
+        "meaning": "皆,都",
+        "notes": "表统括整个范围",
+        "examples": "既醉而出,并受其福|并是大王亲骨肉|大胡笳十八拍,小胡笳十九拍,并蔡琰作|黄发垂髫并怡然自乐|并受促织恩荫|举家并受其害"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "介词",
+        "meaning": "连,连同",
+        "notes": "",
+        "examples": "并家人齐发下狱中监禁|杖至百,两股间浓血流离,并虫亦不能行捉矣"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "连词",
+        "meaning": "且",
+        "notes": "表两个动作同时进行",
+        "examples": "拾遗穗于故畦,并歌并进|冬则讲武,春则种植,并戍并耕,则兵未劳而有盈蓄矣"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "连词",
+        "meaning": "而且,同时,又",
+        "notes": "表递进关系",
+        "examples": "矫以君命,并命群臣|奉命吊表二子,并慰劳其军中用事者|并刑马作誓|并自为其名|千古龙蟠并虎踞|并以为国人之读兹编者勖|指出了问题的症结,并提出了解决办法|并且"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "连词",
+        "meaning": "和",
+        "notes": "表并列",
+        "examples": "对联、题名并篆文,为字共三十有四"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "动词",
+        "meaning": "催逼",
+        "notes": "旧指,作为“併”的简化字",
+        "examples": "俺娘无日无夜并女工"
+      },
+      {
+        "pinyin": "pīn",
+        "pos": "动词",
+        "meaning": "拼,拼杀,舍命相斗,尽力地干",
+        "notes": "通“拚(pīn)”",
+        "examples": "惹起那五处兵刀,并董卓诛袁绍|崔道成和邱道人两个又并了十合之上"
+      },
+      {
+        "pinyin": "bǐng",
+        "pos": "动词",
+        "meaning": "排除,放弃",
+        "notes": "通“屏”",
+        "examples": "寡人以伐钟磬之县,并歌舞之乐矣|故以知王天下者并刑"
+      },
+      {
+        "pinyin": "bǐng",
+        "pos": "动词",
+        "meaning": "屏退,使退下",
+        "notes": "通“屏”",
+        "examples": "上问曰:“计安出?”(袁)盎对曰:“愿并左右。”上并人,独(晁)错在"
+      },
+      {
+        "pinyin": "bǐng",
+        "pos": "动词",
+        "meaning": "抑制",
+        "notes": "通“屏”",
+        "examples": "观者并气息而倾竦"
+      },
+      {
+        "pinyin": "bìng",
+        "pos": "名词",
+        "meaning": "屏藩",
+        "notes": "",
+        "examples": "维我后嗣,旁建宗子,丕维周之始并"
+      },
+      {
+        "pinyin": "bīng",
+        "pos": "名词",
+        "meaning": "古州名,即并州。其地在今河北保定、正定和山西大同、太原一带",
+        "notes": "",
+        "examples": "并汾乔木,望秋先陨"
+      },
+      {
+        "pinyin": "bīng",
+        "pos": "名词",
+        "meaning": "山西太原的别称",
+        "notes": "",
+        "examples": ""
+      },
+      {
+        "pinyin": "bīng",
+        "pos": "名词",
+        "meaning": "姓",
+        "notes": "作姓",
+        "examples": ""
+      },
+      {
+        "pinyin": "bàng",
+        "pos": "动词",
+        "meaning": "贴近,依傍,依随",
+        "notes": "作为“竝”的简化,通“傍”",
+        "examples": "见一丈夫游之,以为有苦而欲死者也,使弟子并流而承之|并海北上至琅邪|自榆中并河以东,属之阴山|先序今以上至黄帝,学者所共术,大并世盛衰,因载其机祥度制"
+      },
+      {
+        "pinyin": "bàng",
+        "pos": "名词",
+        "meaning": "旁边",
+        "notes": "",
+        "examples": "今来观刈获,乃在松江并"
+      },
+      {
+        "pinyin": "bàn",
+        "pos": "名词",
+        "meaning": "古县名。今云南弥勒",
+        "notes": "用作“同並”",
+        "examples": ""
+      }
+    ],
+    "images": [
+      "images/meta/并_篆书_1.jpg",
+      "images/meta/并_篆书_2.jpg",
+      "images/meta/并_篆书_3.jpg",
+      "images/meta/并_篆书_4.png",
+      "images/meta/并_篆书_5.png",
+      "images/meta/并_篆书_6.png"
+    ]
+  },
+  {
+    "character": "悳",
+    "script": "甲骨文",
+    "creation_method": [
+      "会意字"
+    ],
+    "structure": "⿰",
+    "special_structure": "",
+    "components": [
+      {
+        "component": "彳",
+        "function": [
+          "表意"
+        ],
+        "explanation": "象道路，表示行走、行为。"
+      },
+      {
+        "component": "直",
+        "function": [
+          "表意"
+        ],
+        "explanation": "象目视标杆，表示视线正直。"
+      }
+    ],
+    "original_meaning": "视端正、行正直",
+    "evolution": "甲骨文从彳从直，会视端正、行正直之意。金文另加义符心，或以心代彳，突出心地正直之意。篆文分为简繁二体，隶变后楷书分别写作惠（悳）与德。",
+    "pinyin": [
+      "dé"
+    ],
+    "meaning_chunks": [
+      {
+        "pinyin": "dé",
+        "pos": "形容词",
+        "meaning": "真诚，表里如一",
+        "notes": "本义",
+        "examples": ""
+      }
+    ],
+    "images": [
+      "images/meta/悳_甲骨文_1.jpg"
+    ]
+  },
+  {
+    "character": "畀",
+    "script": "篆书",
+    "creation_method": [
+      "形声字",
+      "会意字"
+    ],
+    "structure": "⿱",
+    "special_structure": "",
+    "components": [
+      {
+        "component": "由",
+        "function": [
+          "表音",
+          "表意"
+        ],
+        "explanation": "位于字的上部，原为矢镞之形，篆书阶段讹变为“由”形，兼表声与盛物之意。"
+      },
+      {
+        "component": "丌",
+        "function": [
+          "表意"
+        ],
+        "explanation": "位于字的下部，原为矢杆或基座之形，篆书阶段讹变为“丌”形，表示放置东西的基座。"
+      }
+    ],
+    "original_meaning": "赐予",
+    "evolution": "甲骨文像带镞的矢，表示赐矢之意；金文下部发生讹变，形似“大”字；篆文进一步讹变为上“由”下“丌”的结构，整体像一筐东西放在基座上准备给人；隶变后楷书写作“畁”，后与“畀”混同。",
+    "pinyin": [
+      "bì",
+      "qí"
+    ],
+    "meaning_chunks": [
+      {
+        "pinyin": "bì",
+        "pos": "动词",
+        "meaning": "赐予",
+        "notes": "本义",
+        "examples": "天畀其才而啬其寿,吁,可惜哉!|贫不能者,畀之财。"
+      },
+      {
+        "pinyin": "bì",
+        "pos": "动词",
+        "meaning": "给予,付与",
+        "notes": "",
+        "examples": "彼姝者子,何以畀之?|取彼谮人,投畀豺虎(把坏人扔给豺虎吃了,表示对坏人愤恨);豺虎不食,投畀有北(北极)|诏使吏民输铜,计铜畀直|以五千元畀之。"
+      },
+      {
+        "pinyin": "bì",
+        "pos": "动词",
+        "meaning": "付托,委任",
+        "notes": "",
+        "examples": "皇天用训厥道,付畀四方|及平王崩,周人将畀虢公政|以重官畀李密,使讨贼|帝雅重瑞名,畀以前职|畀以重任。"
+      },
+      {
+        "pinyin": "bì",
+        "pos": "动词",
+        "meaning": "使",
+        "notes": "通“俾”",
+        "examples": "不设刑,有罪者使象践之;或送不劳山,畀自死|敢请指教畀知王章。"
+      },
+      {
+        "pinyin": "qí",
+        "pos": "动词",
+        "meaning": "举起",
+        "notes": "作为“𢍁”字",
+        "examples": ""
+      }
+    ],
+    "images": [
+      "images/meta/畀_篆书_1.jpg",
+      "images/meta/畀_篆书_2.jpg",
+      "images/meta/畀_篆书_3.png",
+      "images/meta/畀_篆书_4.png"
+    ]
+  },
+  {
+    "character": "脩",
+    "script": "金文",
+    "creation_method": [
+      "形声字",
+      "会意字"
+    ],
+    "structure": "⿰",
+    "special_structure": "",
+    "components": [
+      {
+        "component": "食",
+        "function": [
+          "表意"
+        ],
+        "explanation": "象盛有食物的器皿，表示与饮食有关。"
+      },
+      {
+        "component": "攸",
+        "function": [
+          "表音",
+          "表意"
+        ],
+        "explanation": "表声兼表修治之意，暗示整治好的食物。"
+      }
+    ],
+    "original_meaning": "干肉",
+    "evolution": "金文从食、攸声，会整治好的食物干肉之意。古文改为从肉（冃）、攸声。篆文承接古文并整齐化。隶变后楷书写作脩。",
+    "pinyin": [
+      "xiū",
+      "xiāo"
+    ],
+    "meaning_chunks": [
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "干肉",
+        "notes": "本义",
+        "examples": "凡肉脩之脯赐,皆掌之 | 脯加姜桂曰脩"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "束脩,十条干肉,是古代学生入学致送教师的礼物,后借指薪俸、酬金",
+        "notes": "特指",
+        "examples": "小儿跟随肄业,以房资作为脩金"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "古代酒器",
+        "notes": "通“卣(yǒu)”",
+        "examples": "凡祭祀……庙用脩,凡山川四方用蜃,凡祼事用概,凡禝事用散"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "纲目",
+        "notes": "通“條(条,tiáo)”",
+        "examples": "举其脩,则有理"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "古县名。汉置,属冀州信都国",
+        "notes": "指",
+        "examples": "脩,莽曰脩治"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "形容词",
+        "meaning": "干缩,枯萎",
+        "notes": "指",
+        "examples": "中谷有蓷,暵其脩矣"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "动词",
+        "meaning": "洗涤",
+        "notes": "通“涤(dí)”",
+        "examples": "盎齐涗酌,凡酒脩酌(洗勺而酌)"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "形容词",
+        "meaning": "长,空间距离大、时间久、寿命长、美好、善良、有条不紊、端正、恭谨等",
+        "notes": "又通“修”",
+        "examples": "四牡脩广,其大有颙 | 老冉冉其将至兮,恐脩名之不立"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "动词",
+        "meaning": "修饰、修理、整修、治理、整治、打扫、兴建、兴修、制定、设置、举行、行动、从事、操持、儆戒、戒备、防备、恢复、整饬、整顿、处理,齐备、备办、修养、修行、遵循、学习、研习、练习、编纂,撰写、勉励,激励、表示、进献等",
+        "notes": "指",
+        "examples": "当权者,争脩舍第 | 脩书一封"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "长度、直径、长处、贤人",
+        "notes": "指",
+        "examples": "謇吾法夫前脩兮,非时俗之所服 | 襛纤得中,脩短合度"
+      },
+      {
+        "pinyin": "xiū",
+        "pos": "名词",
+        "meaning": "姓",
+        "notes": "作姓",
+        "examples": ""
+      },
+      {
+        "pinyin": "xiāo",
+        "pos": "形容词",
+        "meaning": "萧条",
+        "notes": "通“萧”",
+        "examples": "春尽风飒飒,兰雕木脩脩"
+      }
+    ],
+    "images": [
+      "images/meta/脩_金文_1.jpg",
+      "images/meta/脩_金文_2.png"
+    ]
+  }
+]

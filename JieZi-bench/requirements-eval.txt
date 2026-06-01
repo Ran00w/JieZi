@@ -1,0 +1,9 @@
+pyyaml==6.0.3
+requests==2.32.5
+bert-score==0.3.13
+transformers
+modelscope==1.35.1
+vllm==0.18.0
+torch==2.10.0
+numpy==2.1.2
+openai==2.3.0

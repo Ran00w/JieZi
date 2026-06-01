@@ -1,0 +1,38 @@
+# JieZi-bench .gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment & secrets
+.env
+*.local.yaml
+
+# LLM judge sensitive configs
+llm_judge/model_config.json
+llm_judge/model_config.backfill_fast.json
+
+# Run outputs
+runs/
+
+# Temporary / batch artifacts
+llm_judge/_batch_cases/
+llm_judge/_retry_cases/
+llm_judge/results/
+
+# Claude Code
+.claude/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

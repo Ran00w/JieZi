@@ -1,0 +1,5 @@
+backend: api_chat_compatible
+base_url: https://api.juheai.top/v1
+api_key_env: OPENAI_API_KEY
+model: gpt-5.4-pro
+timeout: 300
