@@ -804,22 +804,21 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 8px;
             border: 1px solid rgba(100, 73, 43, 0.2);
             background: rgba(255, 250, 241, 0.88);
             color: var(--muted-ink);
             cursor: pointer;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             padding: 0;
             font-family: inherit;
             z-index: 2;
+            font-size: 16px;
         }
 
         .evo-toggle-btn:hover {
@@ -828,34 +827,12 @@
             color: var(--seal-red);
         }
 
-        .evo-toggle-btn .chevron {
-            width: 10px;
-            height: 5px;
-            position: relative;
+        .evo-toggle-btn i {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .evo-toggle-btn .chevron::before,
-        .evo-toggle-btn .chevron::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 6px;
-            height: 6px;
-            border-right: 1.5px solid currentColor;
-            border-bottom: 1.5px solid currentColor;
-            transform: rotate(45deg);
-        }
-
-        .evo-toggle-btn .chevron::before { left: 0; }
-        .evo-toggle-btn .chevron::after { left: 3px; }
-
-        .evo-toggle-btn.open .chevron {
+        .evo-toggle-btn.open i {
             transform: rotate(180deg);
-        }
-
-        .evo-toggle-btn.open .chevron::before,
-        .evo-toggle-btn.open .chevron::after {
-            /* already rotated by parent */
         }
 
         /* --- Timeline panel --- */
@@ -965,8 +942,8 @@
             .evo-stage-item { min-width: 56px; max-width: 72px; }
             .evo-stage-img { width: 56px; height: 56px; }
             .evo-arrow-connector { padding-top: 18px; }
-            .evo-toggle-btn { width: 28px; height: 28px; }
-            .evo-answer-wrap { padding-right: 36px; }
+            .evo-toggle-btn { width: 32px; height: 32px; font-size: 14px; }
+            .evo-answer-wrap { padding-right: 40px; }
         }
         .evolution-timeline:hover .evolution-stage-img {
             opacity: 0.45;
@@ -1101,7 +1078,7 @@
         .meta-card {
             background: linear-gradient(180deg, rgba(255, 252, 244, 0.97), rgba(250, 244, 232, 0.94));
             border: 1px solid rgba(100, 73, 43, 0.18);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 14px 38px rgba(73, 46, 24, 0.1);
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1115,166 +1092,37 @@
             transform: translateY(-3px);
         }
 
-        .meta-card-header {
-            padding: 24px 24px 18px;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            border-bottom: 1px solid rgba(100, 73, 43, 0.1);
+        /* --- Image showcase (visual focus) --- */
+        .meta-img-showcase {
+            padding: 16px 20px 0;
         }
 
-        .meta-char-frame {
-            flex-shrink: 0;
-            width: 82px;
-            height: 82px;
+        .meta-img-showcase-gallery {
             display: flex;
-            align-items: center;
+            gap: 10px;
+            flex-wrap: nowrap;
             justify-content: center;
-            font-size: 2.6rem;
-            font-family: 'Noto Serif SC', 'Songti SC', serif;
-            font-weight: 700;
-            color: var(--ink);
-            background: linear-gradient(180deg, rgba(246, 234, 210, 0.86), rgba(255, 250, 241, 0.94));
-            border: 2px solid rgba(157, 20, 20, 0.2);
-            border-radius: 8px;
-            box-shadow: inset 0 0 22px rgba(157, 20, 20, 0.05);
-            position: relative;
-        }
-
-        .meta-char-frame::after {
-            content: '';
-            position: absolute;
-            inset: 3px;
-            border: 1px solid rgba(157, 20, 20, 0.1);
-            border-radius: 5px;
-            pointer-events: none;
-        }
-
-        .meta-header-info {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .meta-badge-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .meta-badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            font-family: 'Noto Serif SC', 'Songti SC', serif;
-        }
-
-        .meta-badge.script {
-            background: rgba(28, 107, 99, 0.1);
-            border: 1px solid rgba(28, 107, 99, 0.22);
-            color: var(--jade);
-        }
-
-        .meta-badge.method {
-            background: rgba(143, 95, 42, 0.09);
-            border: 1px solid rgba(143, 95, 42, 0.2);
-            color: var(--bronze);
-        }
-
-        .meta-badge.structure {
-            background: rgba(157, 20, 20, 0.07);
-            border: 1px solid rgba(157, 20, 20, 0.18);
-            color: var(--seal-red);
-            font-size: 1rem;
-            padding: 2px 10px;
-        }
-
-        .meta-original-meaning {
-            font-size: 0.95rem;
-            color: var(--ink);
-            line-height: 1.5;
-        }
-
-        .meta-original-meaning .label {
-            display: inline-block;
-            font-weight: 600;
-            color: var(--seal-red);
-            margin-right: 6px;
-            font-family: 'Noto Serif SC', 'Songti SC', serif;
-            font-size: 0.85rem;
-            padding: 1px 6px;
-            background: rgba(157, 20, 20, 0.06);
-            border-radius: 4px;
-        }
-
-        .meta-original-meaning .value {
-            color: var(--muted-ink);
-        }
-
-        .meta-pinyin-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            align-items: center;
-        }
-
-        .meta-pinyin-row .label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--muted-ink);
-            font-family: 'Noto Serif SC', 'Songti SC', serif;
-            margin-right: 2px;
-        }
-
-        .meta-pinyin-tag {
-            display: inline-block;
-            padding: 2px 10px;
-            background: rgba(143, 95, 42, 0.06);
-            border: 1px solid rgba(143, 95, 42, 0.16);
-            border-radius: 20px;
-            font-size: 0.82rem;
-            color: var(--bronze);
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-        }
-
-        /* --- Metadata image gallery --- */
-        .meta-img-section {
-            padding: 4px 24px 0;
-        }
-
-        .meta-img-gallery {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            padding: 14px 0;
-            border-top: 1px solid rgba(100, 73, 43, 0.08);
+            padding: 10px 0;
             overflow-x: auto;
         }
 
-        .meta-img-thumb {
-            width: 64px;
-            height: 64px;
-            border-radius: 6px;
+        .meta-img-showcase-thumb {
+            width: 88px;
+            height: 88px;
+            border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
             background: linear-gradient(180deg, rgba(246, 234, 210, 0.86), rgba(255, 250, 241, 0.94));
-            border: 1px solid rgba(100, 73, 43, 0.16);
+            border: 2px solid rgba(100, 73, 43, 0.14);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6px;
+            padding: 8px;
             flex-shrink: 0;
         }
 
-        .meta-img-thumb img {
+        .meta-img-showcase-thumb img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -1282,23 +1130,135 @@
             transition: transform 0.3s;
         }
 
-        .meta-img-thumb:hover {
-            border-color: rgba(157, 20, 20, 0.32);
-            box-shadow: 0 6px 18px rgba(73, 46, 24, 0.14);
-            transform: translateY(-2px);
+        .meta-img-showcase-thumb:hover {
+            border-color: rgba(157, 20, 20, 0.4);
+            box-shadow: 0 8px 24px rgba(73, 46, 24, 0.18);
+            transform: translateY(-3px);
         }
 
-        .meta-img-thumb:hover img {
-            transform: scale(1.08);
+        .meta-img-showcase-thumb:hover img {
+            transform: scale(1.1);
         }
 
-        .meta-img-count {
+        /* --- Card info area (subtle character + badges + meaning) --- */
+        .meta-card-info {
+            padding: 14px 24px 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 1px solid rgba(100, 73, 43, 0.08);
+        }
+
+        .meta-char-indicator {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--ink);
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+            opacity: 0.55;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .meta-info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .meta-info-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 14px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+        }
+
+        .meta-info-badge .info-label {
             font-size: 0.72rem;
+            font-weight: 500;
+            opacity: 0.7;
+            margin-right: 6px;
+            padding-right: 8px;
+            border-right: 1px solid currentColor;
+        }
+
+        .meta-info-badge.script {
+            background: rgba(28, 107, 99, 0.1);
+            border: 1px solid rgba(28, 107, 99, 0.22);
+            color: var(--jade);
+        }
+
+        .meta-info-badge.script .info-label { color: var(--jade); }
+
+        .meta-info-badge.method {
+            background: rgba(143, 95, 42, 0.09);
+            border: 1px solid rgba(143, 95, 42, 0.2);
+            color: var(--bronze);
+        }
+
+        .meta-info-badge.method .info-label { color: var(--bronze); }
+
+        .meta-info-badge.structure {
+            background: rgba(157, 20, 20, 0.07);
+            border: 1px solid rgba(157, 20, 20, 0.18);
+            color: var(--seal-red);
+        }
+
+        .meta-info-badge.structure .info-label { color: var(--seal-red); }
+
+        .meta-meaning-display {
+            font-size: 1.05rem;
+            color: var(--ink);
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .meta-meaning-display .meaning-label {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--seal-red);
+            margin-right: 8px;
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+            font-size: 0.88rem;
+        }
+
+        .meta-meaning-display .meaning-value {
+            color: var(--ink);
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+
+        .meta-pinyin-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .meta-pinyin-display .pinyin-label {
+            font-size: 0.82rem;
+            font-weight: 700;
             color: var(--muted-ink);
-            padding: 2px 8px;
-            background: rgba(100, 73, 43, 0.05);
-            border-radius: 10px;
-            margin-left: 4px;
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+            margin-right: 2px;
+        }
+
+        .meta-pinyin-tag {
+            display: inline-block;
+            padding: 3px 12px;
+            background: rgba(143, 95, 42, 0.06);
+            border: 1px solid rgba(143, 95, 42, 0.18);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--bronze);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
         }
 
         /* --- Metadata body sections --- */
@@ -1314,7 +1274,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.85rem;
+            font-size: 0.92rem;
             font-weight: 700;
             color: var(--ink);
             margin-bottom: 10px;
@@ -1324,7 +1284,7 @@
         .meta-section-label::before {
             content: '';
             width: 4px;
-            height: 16px;
+            height: 18px;
             border-radius: 2px;
             background: var(--seal-red);
         }
@@ -1357,8 +1317,8 @@
         }
 
         .meta-component-name {
-            font-size: 1.1rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            font-weight: 800;
             color: var(--ink);
             font-family: 'Noto Serif SC', 'Songti SC', serif;
         }
@@ -1371,26 +1331,26 @@
 
         .meta-component-func {
             display: inline-block;
-            padding: 1px 8px;
-            background: rgba(28, 107, 99, 0.09);
-            border: 1px solid rgba(28, 107, 99, 0.18);
+            padding: 2px 10px;
+            background: rgba(28, 107, 99, 0.1);
+            border: 1px solid rgba(28, 107, 99, 0.2);
             border-radius: 4px;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             color: var(--jade);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .meta-component-desc {
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             color: var(--muted-ink);
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         /* --- Evolution text --- */
         .meta-evolution-text {
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             color: var(--muted-ink);
-            line-height: 1.8;
+            line-height: 1.85;
             background: rgba(255, 250, 241, 0.72);
             border: 1px solid rgba(100, 73, 43, 0.12);
             border-radius: 8px;
@@ -1407,7 +1367,7 @@
         }
 
         .meta-chunks-count {
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             color: var(--muted-ink);
             font-weight: 400;
             margin-left: 6px;
@@ -1416,16 +1376,17 @@
         .meta-chunks-toggle {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-            padding: 4px 12px;
+            gap: 6px;
+            padding: 6px 16px;
             background: rgba(255, 250, 241, 0.88);
-            border: 1px solid rgba(100, 73, 43, 0.16);
+            border: 1px solid rgba(100, 73, 43, 0.18);
             border-radius: 6px;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: var(--muted-ink);
             cursor: pointer;
             transition: all 0.25s;
             font-family: inherit;
+            font-weight: 600;
         }
 
         .meta-chunks-toggle:hover {
@@ -1436,7 +1397,7 @@
 
         .meta-chunks-toggle i {
             transition: transform 0.3s;
-            font-size: 0.7rem;
+            font-size: 0.85rem;
         }
 
         .meta-chunks-toggle.open i {
@@ -1444,8 +1405,9 @@
         }
 
         .meta-chunks-wrapper {
-            max-height: 340px;
+            max-height: 360px;
             overflow-y: auto;
+            overflow-x: auto;
             border: 1px solid rgba(100, 73, 43, 0.12);
             border-radius: 8px;
             margin-top: 10px;
@@ -1459,7 +1421,9 @@
         .meta-chunks-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.82rem;
+            font-size: 0.84rem;
+            table-layout: fixed;
+            min-width: 560px;
         }
 
         .meta-chunks-table thead {
@@ -1471,21 +1435,28 @@
         .meta-chunks-table th {
             background: rgba(255, 250, 241, 0.98);
             border-bottom: 1px solid rgba(100, 73, 43, 0.14);
-            padding: 10px 12px;
+            padding: 10px 10px;
             text-align: left;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 700;
             color: var(--muted-ink);
             font-family: 'Noto Serif SC', 'Songti SC', serif;
             white-space: nowrap;
         }
 
+        .meta-chunks-table th.col-pinyin { width: 75px; }
+        .meta-chunks-table th.col-pos { width: 48px; }
+        .meta-chunks-table th.col-meaning { width: 18%; }
+        .meta-chunks-table th.col-notes { width: 56px; }
+        .meta-chunks-table th.col-examples { width: auto; }
+
         .meta-chunks-table td {
-            padding: 8px 12px;
+            padding: 8px 10px;
             border-bottom: 1px solid rgba(100, 73, 43, 0.06);
             color: var(--muted-ink);
             vertical-align: top;
-            line-height: 1.55;
+            line-height: 1.6;
+            word-break: break-all;
         }
 
         .meta-chunks-table tbody tr {
@@ -1502,31 +1473,34 @@
 
         .meta-chunks-table .col-pinyin {
             color: var(--seal-red);
-            font-weight: 500;
+            font-weight: 600;
             white-space: nowrap;
             font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
         }
 
         .meta-chunks-table .col-pos {
             color: var(--bronze);
-            font-weight: 500;
+            font-weight: 600;
             white-space: nowrap;
         }
 
         .meta-chunks-table .col-notes {
             color: var(--jade);
             font-size: 0.78rem;
-            white-space: nowrap;
+            white-space: normal;
+            word-break: break-all;
         }
 
         .meta-chunks-table .col-examples {
-            font-size: 0.78rem;
-            max-width: 220px;
+            font-size: 0.8rem;
+            line-height: 1.6;
         }
 
         /* --- Chunks wrapper scrollbar --- */
         .meta-chunks-wrapper::-webkit-scrollbar {
             width: 5px;
+            height: 5px;
         }
 
         .meta-chunks-wrapper::-webkit-scrollbar-track {
@@ -1545,10 +1519,9 @@
             .level-tab { min-width: 100px; padding: 12px 16px; }
             .demo-grid { grid-template-columns: 1fr; }
             .meta-grid { grid-template-columns: 1fr; }
-            .meta-card-header { flex-direction: column; align-items: center; text-align: center; }
-            .meta-header-info { align-items: center; }
-            .meta-badge-row { justify-content: center; }
-            .meta-pinyin-row { justify-content: center; }
+            .meta-img-showcase-thumb { width: 70px; height: 70px; }
+            .meta-info-row { justify-content: center; }
+            .meta-meaning-display { text-align: center; }
         }
 
         /* ========== ANIMATIONS ========== */
@@ -2489,7 +2462,7 @@
             try {
                 const vqaResp = await fetch('data/vqa_data.json');
                 vqaData = await vqaResp.json();
-                loadMetadata(); // fire-and-forget, don't block
+                await loadMetadata(); // await completion before rendering
                 renderLevel('metadata');
             } catch (error) {
                 console.error('Failed to load data:', error);
@@ -2530,12 +2503,33 @@
         }
 
         // ==================== RENDER LEVEL ====================
+        // ==================== IDS MAPPING ====================
+        function idsToText(ids) {
+            const map = {
+                '⿱': '上下结构',
+                '⿰': '左右结构',
+                '⿺': '左下包围',
+                '⿸': '左上包围',
+                '⿵': '三面包围（上）',
+                '⿶': '三面包围（下）',
+                '⿷': '三面包围（左）',
+                '⿹': '三面包围（右）',
+                '⿴': '全包围',
+                '⿳': '上中下结构',
+                '⿲': '左中右结构',
+                '⿻': '嵌套结构',
+                '⿼': '上下结构',
+                '⿽': '左右结构',
+            };
+            return map[ids] || ids;
+        }
+
         // ==================== RENDER METADATA ====================
         function renderMetadata() {
             const container = document.getElementById('metaContent');
             const html = metaSamples.map((m, cardIdx) => {
                 const methodBadges = m.creation_method.map(cm =>
-                    `<span class="meta-badge method">${cm}</span>`
+                    `<span class="meta-info-badge method"><span class="info-label">六书造字法</span>${cm}</span>`
                 ).join('');
 
                 const pinyinTags = m.pinyin.map(p =>
@@ -2543,7 +2537,7 @@
                 ).join('');
 
                 const imgThumbs = (m.images || []).map((img, i) =>
-                    `<div class="meta-img-thumb" onclick="openModal('${img}')" title="点击放大">
+                    `<div class="meta-img-showcase-thumb" onclick="openModal('${img}')" title="点击放大">
                         <img src="${img}" alt="${m.character} ${m.script} 图片${i+1}" loading="lazy">
                     </div>`
                 ).join('');
@@ -2566,20 +2560,20 @@
                 const chunks = m.meaning_chunks || [];
                 const chunkCount = chunks.length;
                 const tableId = `chunks-table-${cardIdx}`;
-                const shouldCollapse = chunkCount > 6;
+                const shouldCollapse = true; // always collapsed by default
                 const tableRows = chunks.map(c => `
                     <tr>
                         <td class="col-pinyin">${c.pinyin}</td>
                         <td class="col-pos">${c.pos}</td>
-                        <td>${c.meaning}</td>
+                        <td class="col-meaning">${c.meaning}</td>
                         <td class="col-notes">${c.notes || ''}</td>
                         <td class="col-examples">${(c.examples || '').replace(/\|/g, ' | ')}</td>
                     </tr>
                 `).join('');
 
                 const imgSection = (m.images && m.images.length > 0) ? `
-                    <div class="meta-img-section">
-                        <div class="meta-img-gallery">${imgThumbs}</div>
+                    <div class="meta-img-showcase">
+                        <div class="meta-img-showcase-gallery">${imgThumbs}</div>
                     </div>
                 ` : '';
 
@@ -2598,11 +2592,11 @@
                             <table class="meta-chunks-table">
                                 <thead>
                                     <tr>
-                                        <th>拼音</th>
-                                        <th>词性</th>
-                                        <th>释义</th>
-                                        <th>备注</th>
-                                        <th>例句</th>
+                                        <th class="col-pinyin">现代读音</th>
+                                        <th class="col-pos">词性</th>
+                                        <th class="col-meaning">释义</th>
+                                        <th class="col-notes">备注</th>
+                                        <th class="col-examples">例句</th>
                                     </tr>
                                 </thead>
                                 <tbody>${tableRows}</tbody>
@@ -2613,23 +2607,21 @@
 
                 return `
                 <div class="meta-card">
-                    <div class="meta-card-header">
-                        <div class="meta-char-frame">${m.character}</div>
-                        <div class="meta-header-info">
-                            <div class="meta-badge-row">
-                                <span class="meta-badge script">${m.script}</span>
-                                ${methodBadges}
-                                <span class="meta-badge structure">${m.structure}</span>
-                            </div>
-                            <div class="meta-original-meaning">
-                                <span class="label">本义</span><span class="value">${m.original_meaning}</span>
-                            </div>
-                            <div class="meta-pinyin-row">
-                                <span class="label">拼音</span>${pinyinTags}
-                            </div>
+                    ${imgSection}
+                    <div class="meta-card-info">
+                        <div class="meta-char-indicator">${m.character}</div>
+                        <div class="meta-info-row">
+                            <span class="meta-info-badge script"><span class="info-label">字形</span>${m.script}</span>
+                            ${methodBadges}
+                            <span class="meta-info-badge structure"><span class="info-label">结构</span>${idsToText(m.structure)}</span>
+                        </div>
+                        <div class="meta-meaning-display">
+                            <span class="meaning-label">本义</span><span class="meaning-value">${m.original_meaning}</span>
+                        </div>
+                        <div class="meta-pinyin-display">
+                            <span class="pinyin-label">现代读音</span>${pinyinTags}
                         </div>
                     </div>
-                    ${imgSection}
                     <div class="meta-card-body">
                         <div class="meta-section">
                             <div class="meta-section-label">构件分解</div>
@@ -2810,8 +2802,7 @@
                             <div class="demo-answer">${highlightAnswer(ex.answer, ex.task)}</div>
                             ${hasStages ? `
                             <button class="evo-toggle-btn" onclick="toggleEvolution(${idx})" title="展开字形演变时间轴" aria-label="展开字形演变">
-                                <span class="chevron"></span>
-                                <span class="chevron"></span>
+                                <i class="fas fa-chevron-down"></i>
                             </button>
                             ` : ''}
                         </div>
