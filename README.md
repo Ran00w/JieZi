@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ran00w.github.io/JieZi-test/">
+  <a href="https://ran00w.github.io/JieZi/">
     <img src="https://img.shields.io/badge/Project%20Page-JieZi%20Demo-2E7D32?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Project Page" />
   </a>
   <a href="https://github.com/Ran00w/JieZi-test">
