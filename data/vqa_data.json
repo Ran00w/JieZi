@@ -11,69 +11,6 @@
       ],
       "examples": [
         {
-          "id": "人_甲骨文_0::vqa::glyph",
-          "image": "images/img_00001.jpg",
-          "character": "人",
-          "script": "甲骨文",
-          "task": "script",
-          "question": "请判断该字的字形类别。",
-          "answer": "甲骨文"
-        },
-        {
-          "id": "人_金文_1::vqa::glyph",
-          "image": "images/img_00002.jpg",
-          "character": "人",
-          "script": "金文",
-          "task": "script",
-          "question": "图中字形属于哪一种书体？",
-          "answer": "金文"
-        },
-        {
-          "id": "口_草书_4::vqa::glyph",
-          "image": "images/img_00003.jpg",
-          "character": "口",
-          "script": "草书",
-          "task": "script",
-          "question": "该图像呈现的是何种字形？",
-          "answer": "草书"
-        },
-        {
-          "id": "口_篆书_2::vqa::glyph",
-          "image": "images/img_00004.jpg",
-          "character": "口",
-          "script": "篆书",
-          "task": "script",
-          "question": "请辨识图中文字所属的书体类型。",
-          "answer": "篆书"
-        },
-        {
-          "id": "山_隶书_3::vqa::glyph",
-          "image": "images/img_00005.jpg",
-          "character": "ɽ",
-          "script": "隶书",
-          "task": "script",
-          "question": "请说明图中文字的字形类别。",
-          "answer": "隶书"
-        },
-        {
-          "id": "山_楷书_5::vqa::glyph",
-          "image": "images/img_00006.png",
-          "character": "ɽ",
-          "script": "楷书",
-          "task": "script",
-          "question": "该图像呈现的是何种字形？",
-          "answer": "楷书"
-        },
-        {
-          "id": "火_甲骨文_0::vqa::glyph",
-          "image": "images/img_00007.jpg",
-          "character": "火",
-          "script": "甲骨文",
-          "task": "script",
-          "question": "请判断图中所示为楷书、隶书、篆书或草书等何种字形。",
-          "answer": "甲骨文"
-        },
-        {
           "id": "手_甲骨文_0::vqa::glyph",
           "image": "images/img_00008.jpg",
           "character": "手",
@@ -101,22 +38,49 @@
           "answer": "草书"
         },
         {
-          "id": "日_篆书_2::vqa::glyph",
-          "image": "images/img_00011.jpg",
-          "character": "日",
-          "script": "篆书",
-          "task": "script",
-          "question": "这张图里的字体类型是什么？",
-          "answer": "篆书"
+          "id": "艰_隶书_rebuttal::vqa::headword",
+          "image": "images/l1/艰_隶.jpg",
+          "character": "艰",
+          "script": "隶书",
+          "task": "headword",
+          "question": "这个字是什么？",
+          "answer": "艰"
         },
         {
-          "id": "心_隶书_3::vqa::glyph",
-          "image": "images/img_00012.jpg",
-          "character": "心",
+          "id": "不_金文_rebuttal::vqa::headword",
+          "image": "images/l1/金文_不.png",
+          "character": "不",
+          "script": "金文",
+          "task": "headword",
+          "question": "这个字是什么？",
+          "answer": "不"
+        },
+        {
+          "id": "嘉_隶书_rebuttal::vqa::headword",
+          "image": "images/l1/隶_嘉.jpg",
+          "character": "嘉",
           "script": "隶书",
+          "task": "headword",
+          "question": "这个字是什么？",
+          "answer": "嘉"
+        },
+        {
+          "id": "甲骨文_1_rebuttal::vqa::script",
+          "image": "images/l1/甲骨文_1.png",
+          "character": "其",
+          "script": "甲骨文",
           "task": "script",
-          "question": "此字形应归入哪一类书体？",
-          "answer": "隶书"
+          "question": "这是哪一种字形？",
+          "answer": "甲骨文"
+        },
+        {
+          "id": "将_篆书_rebuttal::vqa::headword",
+          "image": "images/l1/将_篆书.png",
+          "character": "将",
+          "script": "篆书",
+          "task": "headword",
+          "question": "这个字是什么？",
+          "answer": "将"
         }
       ]
     },
@@ -408,7 +372,7 @@
         },
         {
           "id": "㱃_楷书_7",
-          "image": "images/evo/㱃_main.png",
+          "image": "images/evo/㱃_楷书.jpg",
           "character": "㱃",
           "script": "楷书",
           "task": "evolution",
@@ -433,7 +397,7 @@
             },
             {
               "script": "楷书",
-              "image": "images/evo/㱃_楷书.png"
+              "image": "images/evo/㱃_楷书.jpg"
             },
             {
               "script": "草书",
@@ -443,7 +407,7 @@
         },
         {
           "id": "冀_篆书_0::vqa::evolution",
-          "image": "images/evo/冀_main.jpg",
+          "image": "images/evo/冀_篆书.jpg",
           "character": "冀",
           "script": "篆书",
           "task": "evolution",
