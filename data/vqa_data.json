@@ -81,6 +81,15 @@
           "task": "headword",
           "question": "这个字是什么？",
           "answer": "将"
+        },
+        {
+          "id": "并_篆书_meta1::vqa::script",
+          "image": "images/meta/并_篆书_1.jpg",
+          "character": "并",
+          "script": "篆书",
+          "task": "script",
+          "question": "图中展示的是哪一种字形？",
+          "answer": "篆书"
         }
       ]
     },
@@ -161,7 +170,7 @@
         {
           "id": "鹿_甲骨文_0::vqa::components_full",
           "image": "images/img_00019.jpg",
-          "character": "¹",
+          "character": "鹿",
           "script": "甲骨文",
           "task": "components",
           "question": "请详细列出该字的全部构件，并逐一说明其功能、演变类型及构字解释。",
@@ -197,7 +206,7 @@
         {
           "id": "鹿_隶书_3::vqa::components_full",
           "image": "images/img_00023.jpg",
-          "character": "¹",
+          "character": "鹿",
           "script": "隶书",
           "task": "components",
           "question": "该字由哪些构件组成？各构件在构字中承担何种功能，经历了怎样的演变？",
@@ -209,16 +218,15 @@
       "id": "l3",
       "name": "Level 3: 字义与造字法",
       "short_name": "字义追溯",
-      "description": "追溯造字本义，判断六书归属",
+      "description": "追溯古文字的造字本义",
       "tasks": [
-        "etymology",
         "meaning"
       ],
       "examples": [
         {
           "id": "鹿_甲骨文_0::vqa::benyi",
           "image": "images/img_00019.jpg",
-          "character": "¹",
+          "character": "鹿",
           "script": "甲骨文",
           "task": "meaning",
           "question": "该字的字源本义是什么？",
@@ -236,7 +244,7 @@
         {
           "id": "鹿_草书_4::vqa::benyi",
           "image": "images/img_00025.jpg",
-          "character": "¹",
+          "character": "鹿",
           "script": "草书",
           "task": "meaning",
           "question": "该字的字源本义是什么？",
@@ -252,76 +260,40 @@
           "answer": "中医病症名,即腹中癖块:妇人脐之两旁有筋突起疼痛,大者如臂,小者如指,状类弓弦者,名曰心"
         },
         {
-          "id": "人_隶书_3::vqa::benyi",
-          "image": "images/img_00027.jpg",
-          "character": "人",
-          "script": "隶书",
-          "task": "meaning",
-          "question": "请追溯该字在造字之初的本义。",
-          "answer": "能制造并使用工具进行劳动，又能用语言进行思维和交际的生命"
-        },
-        {
-          "id": "人_楷书_5::vqa::benyi",
-          "image": "images/img_00028.png",
-          "character": "人",
-          "script": "楷书",
-          "task": "meaning",
-          "question": "请说明该字的本义，即其造字时所要表达的核心概念。",
-          "answer": "能制造并使用工具进行劳动,又能用语言进行思维和交际的生命"
-        },
-        {
-          "id": "鬱_甲骨文_0::vqa::zaozifa",
-          "image": "images/img_00013.jpg",
-          "character": "鬱",
-          "script": "甲骨文",
-          "task": "etymology",
-          "question": "该字的结构体现了怎样的造字逻辑？",
-          "answer": "会意字"
-        },
-        {
-          "id": "山_甲骨文_0::vqa::benyi",
-          "image": "images/img_00029.jpg",
-          "character": "ɽ",
-          "script": "甲骨文",
-          "task": "meaning",
-          "question": "依其构形分析，该字的初文意义为何？",
-          "answer": "山峰，地面上由土石构成的巨大而高耸的部分"
-        },
-        {
-          "id": "山_金文_1::vqa::benyi",
-          "image": "images/img_00030.jpg",
-          "character": "ɽ",
+          "id": "脩_金文_2::vqa::benyi",
+          "image": "images/meta/脩_金文_2.png",
+          "character": "脩",
           "script": "金文",
           "task": "meaning",
           "question": "这个字的本义是什么？",
-          "answer": "山峰，地面上由土石构成的巨大而高耸的部分"
+          "answer": "干肉"
         },
         {
-          "id": "玉_草书_4::vqa::benyi",
-          "image": "images/img_00031.jpg",
-          "character": "玉",
-          "script": "草书",
-          "task": "meaning",
-          "question": "该字的字源本义是什么？",
-          "answer": "玉石，一种细密、温润而有光泽的美石"
-        },
-        {
-          "id": "玉_篆书_2::vqa::benyi",
-          "image": "images/img_00032.jpg",
-          "character": "玉",
+          "id": "畀_篆书_2::vqa::benyi",
+          "image": "images/meta/畀_篆书_2.png",
+          "character": "畀",
           "script": "篆书",
           "task": "meaning",
-          "question": "该字在古文字阶段的原始意义是什么？",
-          "answer": "玉石,一种细密、温润而有光泽的美石"
+          "question": "这个字的本义是什么？",
+          "answer": "赐予"
         },
         {
-          "id": "月_隶书_2::vqa::benyi",
-          "image": "images/img_00033.jpg",
-          "character": "月",
-          "script": "隶书",
+          "id": "其_甲骨文_rebuttal::vqa::benyi",
+          "image": "images/l1/甲骨文_1.png",
+          "character": "其",
+          "script": "甲骨文",
           "task": "meaning",
           "question": "这个字的本义是什么？",
-          "answer": "月亮，即月球，古也称太阴"
+          "answer": "簸箕"
+        },
+        {
+          "id": "虎_草书_4::vqa::benyi",
+          "image": "images/img_00015.jpg",
+          "character": "虎",
+          "script": "草书",
+          "task": "meaning",
+          "question": "这个字的本义是什么？",
+          "answer": "虎，猛兽名。"
         }
       ]
     },

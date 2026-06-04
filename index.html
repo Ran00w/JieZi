@@ -778,6 +778,61 @@
             min-width: 0;
         }
 
+        .demo-grid.l3-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .l3-grid .demo-card {
+            min-height: 430px;
+        }
+
+        .l3-grid .demo-card-img-wrap {
+            height: 164px;
+            min-height: 164px;
+            padding: 16px;
+        }
+
+        .l3-grid .demo-main-img {
+            width: 118px;
+            height: 118px;
+            max-width: 86%;
+            max-height: 118px;
+            object-fit: contain;
+            display: block;
+            background: #fff;
+        }
+
+        .l3-grid .demo-card-body {
+            padding: 16px 18px 18px;
+            gap: 12px;
+        }
+
+        .l3-grid .demo-question {
+            min-height: 44px;
+            margin: 0;
+        }
+
+        .demo-grid.l4-grid {
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+        }
+
+        .l4-grid .demo-card-img-wrap {
+            height: 208px;
+            min-height: 208px;
+        }
+
+        .l4-grid .demo-main-img {
+            width: 148px;
+            height: 148px;
+            max-width: 82%;
+            max-height: 148px;
+            object-fit: contain;
+            display: block;
+            background: #fff;
+        }
+
         /* ========== EVOLUTION TIMELINE ========== */
         .evolution-chain {
             background: var(--bg-card);
@@ -1157,7 +1212,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
             gap: 28px;
-            align-items: start;
+            align-items: stretch;
         }
 
         .meta-card {
@@ -1169,6 +1224,7 @@
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
 
         .meta-card:hover {
@@ -1484,8 +1540,8 @@
 
         /* --- Components --- */
         .meta-component-list {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-auto-rows: 128px;
             gap: 10px;
         }
 
@@ -1495,6 +1551,10 @@
             border-radius: 8px;
             padding: 14px 16px;
             transition: all 0.25s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
         }
 
         .meta-component-item:hover {
@@ -1537,6 +1597,7 @@
             font-size: 0.9rem;
             color: var(--muted-ink);
             line-height: 1.75;
+            overflow-wrap: anywhere;
         }
 
         /* --- Evolution text --- */
@@ -2635,7 +2696,7 @@
         const levelDesc = {
             l1: { tag: 'Level 1', text: '识别古文字对应的现代字头和书体类型' },
             l2: { tag: 'Level 2', text: '分析汉字的形体结构、构件组成与功能' },
-            l3: { tag: 'Level 3', text: '追溯造字本义，判断六书归属' },
+            l3: { tag: 'Level 3', text: '追溯古文字的造字本义' },
             l4: { tag: 'Level 4', text: '梳理汉字从甲骨文到楷书的形体递变过程' }
         };
 
@@ -2984,7 +3045,9 @@
         function renderExamples(examples) {
             const container = document.getElementById('demoContent');
             const isL1 = currentLevel === 'l1';
-            container.innerHTML = `<div class="demo-grid${isL1 ? ' l1-grid' : ''}">${examples.map((ex, idx) => {
+            const isL3 = currentLevel === 'l3';
+            const isL4 = currentLevel === 'l4';
+            container.innerHTML = `<div class="demo-grid${isL1 ? ' l1-grid' : ''}${isL3 ? ' l3-grid' : ''}${isL4 ? ' l4-grid' : ''}">${examples.map((ex, idx) => {
                 const hasStages = ex.stages && ex.stages.length > 0;
                 const questionHtml = isL1
                     ? `<div class="demo-question qa-line"><span class="qa-label">Q</span><span class="qa-text">${ex.question}</span></div>`
