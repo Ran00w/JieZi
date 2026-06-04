@@ -128,16 +128,6 @@ Coming soon.
 
 If you have any questions, please contact us at [eeran0@mail.scut.edu.cn](mailto:eeran0@mail.scut.edu.cn).
 
-Coming soon.
-
-## 📝 Citation
-
-Coming soon.
-
-## ☎️ Contact
-
-If you have any questions, please contact us at [eeran0@mail.scut.edu.cn](mailto:eeran0@mail.scut.edu.cn).
-
 ## 💙 Acknowledgement
 
 - [SCUT-DLVCLab/MegaHan97K](https://github.com/SCUT-DLVCLab/MegaHan97K)

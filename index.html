@@ -597,17 +597,19 @@
         /* ========== DEMO CARDS ========== */
         .demo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 24px;
+            align-items: stretch;
         }
         .demo-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
             display: flex;
             flex-direction: column;
+            min-height: 560px;
         }
         .demo-card:hover {
             transform: translateY(-4px);
@@ -621,16 +623,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 180px;
+            min-height: 216px;
+            height: 216px;
         }
-        .demo-card img {
+        .demo-card-img-wrap > img,
+        .demo-main-img {
             max-height: 160px;
             max-width: 100%;
             object-fit: contain;
             cursor: pointer;
             transition: transform 0.3s;
         }
-        .demo-card img:hover {
+        .demo-card-img-wrap > img:hover,
+        .demo-main-img:hover {
             transform: scale(1.05);
         }
         .char-badge {
@@ -667,13 +672,14 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            gap: 14px;
         }
         .demo-question {
             font-size: 0.95rem;
             color: var(--text-primary);
-            margin-bottom: 12px;
             font-weight: 500;
             line-height: 1.5;
+            min-height: 48px;
         }
         .demo-answer {
             font-size: 0.9rem;
@@ -688,13 +694,88 @@
         .demo-answer .hl-component { color: #f472b6; font-weight: 600; }
         .task-tag {
             display: inline-block;
-            margin-top: 12px;
+            margin-top: auto;
             padding: 3px 10px;
             background: rgba(255,255,255,0.04);
             border-radius: 6px;
             font-size: 0.75rem;
             color: var(--text-secondary);
             border: 1px solid var(--border-color);
+            align-self: flex-start;
+        }
+
+        .demo-grid.l1-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .l1-grid .demo-card {
+            min-height: 0;
+        }
+
+        .l1-grid .demo-card-img-wrap {
+            height: 148px;
+            min-height: 148px;
+            padding: 14px;
+        }
+
+        .l1-grid .demo-main-img {
+            max-height: 112px;
+            max-width: 82%;
+        }
+
+        .l1-grid .demo-card-body {
+            padding: 14px 16px 16px;
+            gap: 10px;
+        }
+
+        .l1-grid .demo-question {
+            min-height: 0;
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+
+        .l1-grid .evo-answer-wrap {
+            padding-right: 0;
+            min-height: 0;
+            flex: 0;
+        }
+
+        .l1-grid .demo-answer {
+            flex: 0;
+            font-size: 1.02rem;
+            line-height: 1.45;
+            color: var(--ink);
+            font-weight: 700;
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+        }
+
+        .qa-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+        }
+
+        .qa-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+            border-radius: 6px;
+            background: rgba(157, 20, 20, 0.08);
+            border: 1px solid rgba(157, 20, 20, 0.16);
+            color: var(--seal-red);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .qa-text {
+            min-width: 0;
         }
 
         /* ========== EVOLUTION TIMELINE ========== */
@@ -798,6 +879,7 @@
             position: relative;
             padding-right: 42px;
             min-height: 40px;
+            flex: 1;
         }
 
         .evo-toggle-btn {
@@ -845,10 +927,10 @@
         }
 
         .evo-timeline-panel.open {
-            max-height: 360px;
+            max-height: 380px;
             opacity: 1;
             border-top: 1px solid rgba(100, 73, 43, 0.12);
-            margin-top: 14px;
+            margin-top: 2px;
             padding-top: 14px;
         }
 
@@ -858,7 +940,7 @@
             justify-content: center;
             gap: 8px;
             overflow-x: auto;
-            padding: 8px 0;
+            padding: 8px 2px 10px;
         }
 
         .evo-stage-item {
@@ -867,8 +949,7 @@
             align-items: center;
             gap: 6px;
             flex-shrink: 0;
-            min-width: 64px;
-            max-width: 90px;
+            width: 74px;
         }
 
         .evo-stage-img {
@@ -883,6 +964,7 @@
             padding: 8px;
             cursor: pointer;
             transition: all 0.25s;
+            box-sizing: border-box;
         }
 
         .evo-stage-img:hover {
@@ -909,7 +991,9 @@
         .evo-arrow-connector {
             display: flex;
             align-items: center;
-            padding-top: 24px;
+            justify-content: center;
+            width: 16px;
+            padding-top: 25px;
             color: var(--seal-red);
             opacity: 0.4;
             font-size: 0.7rem;
@@ -939,7 +1023,7 @@
         }
 
         @media (max-width: 768px) {
-            .evo-stage-item { min-width: 56px; max-width: 72px; }
+            .evo-stage-item { width: 64px; }
             .evo-stage-img { width: 56px; height: 56px; }
             .evo-arrow-connector { padding-top: 18px; }
             .evo-toggle-btn { width: 32px; height: 32px; font-size: 14px; }
@@ -1071,14 +1155,15 @@
         /* ========== METADATA CONTENT ========== */
         .meta-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
             gap: 28px;
+            align-items: start;
         }
 
         .meta-card {
             background: linear-gradient(180deg, rgba(255, 252, 244, 0.97), rgba(250, 244, 232, 0.94));
             border: 1px solid rgba(100, 73, 43, 0.18);
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 14px 38px rgba(73, 46, 24, 0.1);
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1092,9 +1177,112 @@
             transform: translateY(-3px);
         }
 
+        .meta-card-hero {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 22px 24px 16px;
+            background:
+                linear-gradient(135deg, rgba(157, 20, 20, 0.08), transparent 52%),
+                linear-gradient(180deg, rgba(255, 250, 241, 0.98), rgba(246, 234, 210, 0.54));
+            border-bottom: 1px solid rgba(100, 73, 43, 0.1);
+        }
+
+        .meta-title-block {
+            min-width: 0;
+        }
+
+        .meta-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+            color: var(--muted-ink);
+            font-size: 0.78rem;
+            font-weight: 700;
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+        }
+
+        .meta-kicker::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--seal-red);
+            transform: rotate(45deg);
+        }
+
+        .meta-title {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            color: var(--ink);
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+            line-height: 1;
+        }
+
+        .meta-title-char {
+            font-size: 2.55rem;
+            font-weight: 800;
+        }
+
+        .meta-title-dot {
+            color: rgba(157, 20, 20, 0.52);
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .meta-title-script {
+            color: var(--seal-red);
+            font-size: 1.36rem;
+            font-weight: 800;
+        }
+
+        .meta-hero-badges {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: stretch;
+            gap: 8px;
+            width: min(268px, 54%);
+            flex-shrink: 0;
+        }
+
+        .meta-hero-badges .meta-info-badge {
+            justify-content: flex-start;
+            width: 100%;
+            min-height: 34px;
+            box-sizing: border-box;
+        }
+
+        .meta-hero-badges .meta-info-badge .info-value {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         /* --- Image showcase (visual focus) --- */
         .meta-img-showcase {
             padding: 16px 20px 0;
+        }
+
+        .meta-showcase-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 0 4px 6px;
+            color: var(--muted-ink);
+            font-family: 'Noto Serif SC', 'Songti SC', serif;
+            font-size: 0.86rem;
+            font-weight: 700;
+        }
+
+        .meta-showcase-count {
+            color: var(--seal-red);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
         }
 
         .meta-img-showcase-gallery {
@@ -1107,8 +1295,8 @@
         }
 
         .meta-img-showcase-thumb {
-            width: 88px;
-            height: 88px;
+            width: 92px;
+            height: 92px;
             border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
@@ -1142,7 +1330,7 @@
 
         /* --- Card info area (subtle character + badges + meaning) --- */
         .meta-card-info {
-            padding: 14px 24px 6px;
+            padding: 16px 24px 8px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -1176,6 +1364,7 @@
             font-size: 0.88rem;
             font-weight: 600;
             font-family: 'Noto Serif SC', 'Songti SC', serif;
+            white-space: nowrap;
         }
 
         .meta-info-badge .info-label {
@@ -1212,10 +1401,14 @@
         .meta-info-badge.structure .info-label { color: var(--seal-red); }
 
         .meta-meaning-display {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             color: var(--ink);
             line-height: 1.5;
-            text-align: center;
+            text-align: left;
+            background: rgba(255, 250, 241, 0.76);
+            border: 1px solid rgba(100, 73, 43, 0.1);
+            border-radius: 8px;
+            padding: 11px 14px;
         }
 
         .meta-meaning-display .meaning-label {
@@ -1238,7 +1431,7 @@
             flex-wrap: wrap;
             gap: 6px;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .meta-pinyin-display .pinyin-label {
@@ -1519,9 +1712,11 @@
             .level-tab { min-width: 100px; padding: 12px 16px; }
             .demo-grid { grid-template-columns: 1fr; }
             .meta-grid { grid-template-columns: 1fr; }
+            .meta-card-hero { flex-direction: column; }
+            .meta-hero-badges { max-width: none; justify-content: flex-start; }
             .meta-img-showcase-thumb { width: 70px; height: 70px; }
-            .meta-info-row { justify-content: center; }
-            .meta-meaning-display { text-align: center; }
+            .meta-info-row { justify-content: flex-start; }
+            .meta-meaning-display { text-align: left; }
         }
 
         /* ========== ANIMATIONS ========== */
@@ -2270,7 +2465,7 @@
                     <div class="stat-label">Scripts</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">13,000+</div>
+                    <div class="stat-number">130000+</div>
                     <div class="stat-label">Images</div>
                 </div>
             </div>
@@ -2449,8 +2644,10 @@
 
         async function loadMetadata() {
             try {
-                const resp = await fetch('data/meta_samples.json');
+                const resp = await fetch('data/meta_samples.json', { cache: 'no-store' });
                 metaSamples = await resp.json();
+                const metaOrder = { '并': 0, '畀': 1, '悳': 2, '脩': 3 };
+                metaSamples.sort((a, b) => (metaOrder[a.character] ?? 99) - (metaOrder[b.character] ?? 99));
                 return true;
             } catch (e) {
                 console.error('Failed to load metadata:', e);
@@ -2460,7 +2657,7 @@
 
         async function loadData() {
             try {
-                const vqaResp = await fetch('data/vqa_data.json');
+                const vqaResp = await fetch('data/vqa_data.json', { cache: 'no-store' });
                 vqaData = await vqaResp.json();
                 await loadMetadata(); // await completion before rendering
                 renderLevel('metadata');
@@ -2528,9 +2725,12 @@
         function renderMetadata() {
             const container = document.getElementById('metaContent');
             const html = metaSamples.map((m, cardIdx) => {
-                const methodBadges = m.creation_method.map(cm =>
-                    `<span class="meta-info-badge method"><span class="info-label">六书造字法</span>${cm}</span>`
-                ).join('');
+                const methodBadge = `
+                    <span class="meta-info-badge method">
+                        <span class="info-label">六书造字法</span>
+                        <span class="info-value">${m.creation_method.join(' / ')}</span>
+                    </span>
+                `;
 
                 const pinyinTags = m.pinyin.map(p =>
                     `<span class="meta-pinyin-tag">${p}</span>`
@@ -2573,6 +2773,10 @@
 
                 const imgSection = (m.images && m.images.length > 0) ? `
                     <div class="meta-img-showcase">
+                        <div class="meta-showcase-label">
+                            <span>示例字形</span>
+                            <span class="meta-showcase-count">${m.images.length} 张</span>
+                        </div>
                         <div class="meta-img-showcase-gallery">${imgThumbs}</div>
                     </div>
                 ` : '';
@@ -2607,14 +2811,22 @@
 
                 return `
                 <div class="meta-card">
+                    <div class="meta-card-hero">
+                        <div class="meta-title-block">
+                            <div class="meta-kicker">字头 / 字形</div>
+                            <div class="meta-title">
+                                <span class="meta-title-char">${m.character}</span>
+                                <span class="meta-title-dot">·</span>
+                                <span class="meta-title-script">${m.script}</span>
+                            </div>
+                        </div>
+                        <div class="meta-hero-badges">
+                            ${methodBadge}
+                            <span class="meta-info-badge structure"><span class="info-label">结构</span><span class="info-value">${idsToText(m.structure)}</span></span>
+                        </div>
+                    </div>
                     ${imgSection}
                     <div class="meta-card-info">
-                        <div class="meta-char-indicator">${m.character}</div>
-                        <div class="meta-info-row">
-                            <span class="meta-info-badge script"><span class="info-label">字形</span>${m.script}</span>
-                            ${methodBadges}
-                            <span class="meta-info-badge structure"><span class="info-label">结构</span>${idsToText(m.structure)}</span>
-                        </div>
                         <div class="meta-meaning-display">
                             <span class="meaning-label">本义</span><span class="meaning-value">${m.original_meaning}</span>
                         </div>
@@ -2771,8 +2983,15 @@
 
         function renderExamples(examples) {
             const container = document.getElementById('demoContent');
-            container.innerHTML = `<div class="demo-grid">${examples.map((ex, idx) => {
+            const isL1 = currentLevel === 'l1';
+            container.innerHTML = `<div class="demo-grid${isL1 ? ' l1-grid' : ''}">${examples.map((ex, idx) => {
                 const hasStages = ex.stages && ex.stages.length > 0;
+                const questionHtml = isL1
+                    ? `<div class="demo-question qa-line"><span class="qa-label">Q</span><span class="qa-text">${ex.question}</span></div>`
+                    : `<div class="demo-question">${ex.question}</div>`;
+                const answerHtml = isL1
+                    ? `<div class="demo-answer qa-line"><span class="qa-label">A</span><span class="qa-text">${highlightAnswer(ex.answer, ex.task)}</span></div>`
+                    : `<div class="demo-answer">${highlightAnswer(ex.answer, ex.task)}</div>`;
                 let stagesHtml = '';
                 if (hasStages) {
                     stagesHtml = ex.stages.map((s, si) => {
@@ -2794,12 +3013,12 @@
                     <div class="demo-card-img-wrap">
                         <span class="char-badge">${ex.character}</span>
                         <span class="script-badge">${ex.script}</span>
-                        <img src="${ex.image}" alt="${ex.character}" loading="lazy" onclick="openModal('${ex.image}')">
+                        <img class="demo-main-img" src="${ex.image}" alt="${ex.character} ${ex.script}" loading="lazy" onclick="openModal('${ex.image}')">
                     </div>
                     <div class="demo-card-body">
-                        <div class="demo-question">${ex.question}</div>
+                        ${questionHtml}
                         <div class="evo-answer-wrap">
-                            <div class="demo-answer">${highlightAnswer(ex.answer, ex.task)}</div>
+                            ${answerHtml}
                             ${hasStages ? `
                             <button class="evo-toggle-btn" onclick="toggleEvolution(${idx})" title="展开字形演变时间轴" aria-label="展开字形演变">
                                 <i class="fas fa-chevron-down"></i>
