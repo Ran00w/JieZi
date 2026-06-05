@@ -11,22 +11,31 @@
       ],
       "examples": [
         {
+          "id": "艰_隶书_rebuttal::vqa::headword",
+          "image": "images/l1/艰_隶.jpg",
+          "character": "艰",
+          "script": "隶书",
+          "task": "headword",
+          "question": "这个字是什么？",
+          "answer": "艰"
+        },
+        {
           "id": "手_甲骨文_0::vqa::glyph",
           "image": "images/img_00008.jpg",
           "character": "手",
           "script": "甲骨文",
           "task": "script",
-          "question": "此字形应归入哪一类书体？",
+          "question": "图中展示的是哪一种字形？",
           "answer": "甲骨文"
         },
         {
-          "id": "手_金文_1::vqa::glyph",
-          "image": "images/img_00009.jpg",
-          "character": "手",
-          "script": "金文",
+          "id": "并_篆书_meta1::vqa::script",
+          "image": "images/meta/并_篆书_1.jpg",
+          "character": "并",
+          "script": "篆书",
           "task": "script",
           "question": "图中展示的是哪一种字形？",
-          "answer": "金文"
+          "answer": "篆书"
         },
         {
           "id": "心_草书_4::vqa::glyph",
@@ -38,15 +47,6 @@
           "answer": "草书"
         },
         {
-          "id": "艰_隶书_rebuttal::vqa::headword",
-          "image": "images/l1/艰_隶.jpg",
-          "character": "艰",
-          "script": "隶书",
-          "task": "headword",
-          "question": "这个字是什么？",
-          "answer": "艰"
-        },
-        {
           "id": "不_金文_rebuttal::vqa::headword",
           "image": "images/l1/金文_不.png",
           "character": "不",
@@ -54,6 +54,24 @@
           "task": "headword",
           "question": "这个字是什么？",
           "answer": "不"
+        },
+        {
+          "id": "手_金文_1::vqa::glyph",
+          "image": "images/img_00009.jpg",
+          "character": "手",
+          "script": "金文",
+          "task": "script",
+          "question": "图中展示的是哪一种字形？",
+          "answer": "金文"
+        },
+        {
+          "id": "其_甲骨文_rebuttal::vqa::script",
+          "image": "images/l1/甲骨文_1.png",
+          "character": "其",
+          "script": "甲骨文",
+          "task": "script",
+          "question": "图中展示的是哪一种字形？",
+          "answer": "甲骨文"
         },
         {
           "id": "嘉_隶书_rebuttal::vqa::headword",
@@ -65,15 +83,6 @@
           "answer": "嘉"
         },
         {
-          "id": "甲骨文_1_rebuttal::vqa::script",
-          "image": "images/l1/甲骨文_1.png",
-          "character": "其",
-          "script": "甲骨文",
-          "task": "script",
-          "question": "这是哪一种字形？",
-          "answer": "甲骨文"
-        },
-        {
           "id": "将_篆书_rebuttal::vqa::headword",
           "image": "images/l1/将_篆书.png",
           "character": "将",
@@ -81,15 +90,6 @@
           "task": "headword",
           "question": "这个字是什么？",
           "answer": "将"
-        },
-        {
-          "id": "并_篆书_meta1::vqa::script",
-          "image": "images/meta/并_篆书_1.jpg",
-          "character": "并",
-          "script": "篆书",
-          "task": "script",
-          "question": "图中展示的是哪一种字形？",
-          "answer": "篆书"
         }
       ]
     },
@@ -101,71 +101,18 @@
       "tasks": [
         "structure",
         "components",
-        "function"
+        "function",
+        "etymology"
       ],
       "examples": [
-        {
-          "id": "鬱_甲骨文_0::vqa::components_full",
-          "image": "images/img_00013.jpg",
-          "character": "鬱",
-          "script": "甲骨文",
-          "task": "components",
-          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
-          "answer": "1. 构件人：功能=表意；演变类型=保留；解释=象人形，表示人在林中采集。；2. 构件林：功能=表意；演变类型=保留；解释=象二木并立，表示林木茂盛。"
-        },
-        {
-          "id": "鬱_金文_1::vqa::components_full",
-          "image": "images/img_00014.jpg",
-          "character": "鬱",
-          "script": "金文",
-          "task": "components",
-          "question": "请完整说明该字各构件的功能、演变类型与构字解释。",
-          "answer": "1. 构件木缶木：功能=表意；演变类型=保留；解释=木缶木为可见构件。；2. 构件冖：功能=表意；演变类型=保留；解释=冖为可见构件。；3. 构件鬯彡：功能=表意；演变类型=保留；解释=鬯彡为可见构件。"
-        },
-        {
-          "id": "虎_草书_4::vqa::components_full",
-          "image": "images/img_00015.jpg",
-          "character": "虎",
-          "script": "草书",
-          "task": "components",
-          "question": "请详细列出该字的全部构件，并逐一说明其功能、演变类型及构字解释。",
-          "answer": "1. 构件虍：功能=表意；演变类型=保留；解释=草书将虎头与身躯连笔简化，保留虎口与斑纹特征。；2. 构件几：功能=表意；演变类型=保留；解释=草书将虎足与尾部简化为几字形，象征虎身下部。"
-        },
-        {
-          "id": "水_篆书_2::vqa::components_full",
-          "image": "images/img_00016.jpg",
-          "character": "ˮ",
-          "script": "篆书",
-          "task": "components",
-          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
-          "answer": "1. 构件㇇：功能=表意；演变类型=保留；解释=㇇为可见构件。；2. 构件亅：功能=表意；演变类型=保留；解释=亅为可见构件。；3. 构件乀丿：功能=表意；演变类型=保留；解释=乀丿为可见构件。"
-        },
         {
           "id": "鱼_隶书_4::vqa::components_full",
           "image": "images/img_00017.jpg",
           "character": "鱼",
           "script": "隶书",
           "task": "components",
-          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
-          "answer": "1. 构件⺈：功能=表意；演变类型=讹变；解释=由鱼头及口部讹变而来，隶书中写作⺈形。；2. 构件田：功能=表意；演变类型=讹变；解释=由鱼身及鳞片纹样讹变而来，隶书中整齐化为田形。；3. 构件灬：功能=表意；演变类型=讹变；解释=由鱼尾及鱼鳍讹变而来，隶书中写作四点底。"
-        },
-        {
-          "id": "鱼_楷书_0::vqa::components_full",
-          "image": "images/img_00018.png",
-          "character": "鱼",
-          "script": "楷书",
-          "task": "components",
-          "question": "依据构形学原理，请系统说明该字各构件的功能属性与历史演变。",
-          "answer": "1. 构件⺈：功能=表意；演变类型=简化；解释=由鱼头及口部简化而来，象征鱼头。；2. 构件田：功能=表意；演变类型=简化；解释=由鱼身及鳞片简化而来，象征鱼身。；3. 构件一：功能=表意；演变类型=简化；解释=由鱼尾简化而来，象征鱼尾。"
-        },
-        {
-          "id": "火_甲骨文_0::vqa::components_full",
-          "image": "images/img_00007.jpg",
-          "character": "火",
-          "script": "甲骨文",
-          "task": "components",
-          "question": "请对该字的构形进行拆解释读，列出所有构件并说明其功能、演变与理据。",
-          "answer": "1. 构件火：功能=表意；演变类型=保留；解释=整体象火焰升腾之形，为独体象形。"
+          "question": "这个字可以拆成哪些主要构件？",
+          "answer": "1. 构件⺈：功能=表意；解释=表示鱼头。；2. 构件田：功能=表意；解释=表示鱼身和鳞片。；3. 构件灬：功能=表意；解释=表示鱼尾和鱼鳍。"
         },
         {
           "id": "鹿_甲骨文_0::vqa::components_full",
@@ -173,52 +120,70 @@
           "character": "鹿",
           "script": "甲骨文",
           "task": "components",
-          "question": "请详细列出该字的全部构件，并逐一说明其功能、演变类型及构字解释。",
-          "answer": "1. 构件整体：功能=表意；演变类型=保留；解释=象头上长有树枝状角的雄鹿之形，上部为角，中部为头身，下部为足。"
+          "question": "这个字的形体主要表现了什么？",
+          "answer": "1. 构件整体：功能=表意；解释=整体像一只带角的鹿，上部表现鹿角，中部表现头身，下部表现足。"
         },
         {
-          "id": "玉_金文_1::vqa::components_full",
-          "image": "images/img_00020.jpg",
-          "character": "玉",
-          "script": "金文",
-          "task": "components",
-          "question": "请把该字的构件信息完整说出（含每个构件的功能、演变类型、解释）。",
-          "answer": "1. 构件三：功能=表意；演变类型=保留；解释=象三片玉并列之形，表示多玉。；2. 构件丨：功能=表意；演变类型=保留；解释=象贯穿玉片的绳索。"
-        },
-        {
-          "id": "日_草书_4::vqa::components_full",
-          "image": "images/img_00021.jpg",
-          "character": "日",
-          "script": "草书",
-          "task": "components",
-          "question": "请把该字的构件信息完整说出（含每个构件的功能、演变类型、解释）。",
-          "answer": "1. 构件整体：功能=表意；演变类型=简化；解释=草书将楷书方折笔画简化为圆转连笔，左侧竖画与内部横画连写，右侧竖画呈弧形，整体轮廓仍保留太阳之形。"
-        },
-        {
-          "id": "手_篆书_2::vqa::components_full",
-          "image": "images/img_00022.jpg",
-          "character": "手",
+          "id": "卬_篆书_0::vqa::components_full",
+          "image": "images/l2/卬_篆书.jpg",
+          "character": "卬",
           "script": "篆书",
           "task": "components",
-          "question": "请从构件分析的角度，完整说明该字各组成部分的功能、演变类型与文字学解释。",
-          "answer": "1. 构件戌：功能=表意；演变类型=保留；解释=象斧钺类兵器，在此表示武力或威慑。；2. 构件口：功能=表意；演变类型=保留；解释=象人口，在此表示众口齐声。"
+          "question": "这个字由哪些构件组成？",
+          "answer": "1. 构件人：功能=表意；解释=像站立的人形，表示主体。；2. 构件卩：功能=表意；解释=像跪坐的人形，表示仰望之姿。"
         },
         {
-          "id": "鹿_隶书_3::vqa::components_full",
-          "image": "images/img_00023.jpg",
-          "character": "鹿",
-          "script": "隶书",
+          "id": "柙_战国文字_0::vqa::components_full",
+          "image": "images/l2/柙_战国文字.jpg",
+          "character": "柙",
+          "script": "战国文字",
           "task": "components",
-          "question": "该字由哪些构件组成？各构件在构字中承担何种功能，经历了怎样的演变？",
-          "answer": "1. 构件广：功能=符号；演变类型=讹变；解释=由甲骨文、金文象形的鹿头与鹿角部分讹变而来，隶变后写作广字头。；2. 构件比：功能=符号；演变类型=讹变；解释=由象形的鹿身、鹿腿及尾部线条讹变、简化而来，隶变后写作比。"
+          "question": "这个字的构件怎样表达字义？",
+          "answer": "1. 构件木：功能=表意；解释=表示木质器物。；2. 构件甲：功能=表意；解释=表示包覆、围合的形体，与木质笼槛之义相关。"
+        },
+        {
+          "id": "柙_古文_0::vqa::zaozifa",
+          "image": "images/l2/柙_战国文字.jpg",
+          "character": "柙",
+          "script": "战国文字",
+          "task": "etymology",
+          "question": "按照传统六书，这个字属于哪一种造字法？",
+          "answer": "会意字"
+        },
+        {
+          "id": "旃_楷书_8::vqa::structure",
+          "image": "images/l2/旃_楷书.jpg",
+          "character": "旃",
+          "script": "楷书",
+          "task": "structure",
+          "question": "这个字是什么结构？",
+          "answer": "左右结构"
+        },
+        {
+          "id": "奢_楷书_0::vqa::components_full",
+          "image": "images/l2/奢_楷书.jpg",
+          "character": "奢",
+          "script": "楷书",
+          "task": "components",
+          "question": "这个字可以拆成哪两个主要部分？",
+          "answer": "1. 构件大：功能=表意；解释=位于上部，提示形体舒展、张大的意味。；2. 构件者：功能=表音；解释=位于下部，承担主要读音线索。"
+        },
+        {
+          "id": "雉_甲骨文_0::vqa::components_full",
+          "image": "images/l2/雉_甲骨文.jpg",
+          "character": "雉",
+          "script": "甲骨文",
+          "task": "components",
+          "question": "这个字由哪些构件组成？各自起什么作用？",
+          "answer": "1. 构件矢：功能=表意/表音；解释=像箭矢之形，提示射猎相关意义，也兼作读音线索。；2. 构件隹：功能=表意；解释=像短尾鸟，表示鸟类。"
         }
       ]
     },
     {
       "id": "l3",
-      "name": "Level 3: 字义与造字法",
-      "short_name": "字义追溯",
-      "description": "追溯古文字的造字本义",
+      "name": "Level 3: 字义分析",
+      "short_name": "字义分析",
+      "description": "追溯古文字的字源本义",
       "tasks": [
         "meaning"
       ],
@@ -477,6 +442,15 @@
               "image": "images/evo/䍩_草书.jpg"
             }
           ]
+        },
+        {
+          "id": "律_甲骨文_0::vqa::analysis",
+          "image": "images/l4/律_甲骨文.jpg",
+          "character": "律",
+          "script": "甲骨文",
+          "task": "analysis",
+          "question": "这个字的右边部件后来发生了什么变化？",
+          "answer": "右边部件后来发生讹变，最终成为今天“律”字右侧的形体。"
         }
       ]
     }

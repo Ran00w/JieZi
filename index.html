@@ -692,6 +692,18 @@
         .demo-answer .hl-etymology { color: #f59e0b; font-weight: 600; }
         .demo-answer .hl-meaning { color: #34d399; font-weight: 600; }
         .demo-answer .hl-component { color: #f472b6; font-weight: 600; }
+        .component-answer-lines {
+            display: grid;
+            gap: 8px;
+        }
+        .component-answer-line {
+            padding-left: 12px;
+            border-left: 2px solid rgba(157, 20, 20, 0.16);
+        }
+        .component-answer-name {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
         .task-tag {
             display: inline-block;
             margin-top: auto;
@@ -2638,7 +2650,7 @@
                 </button>
                 <button class="level-tab" data-level="l3">
                     <div class="tab-num">L3</div>
-                    <div class="tab-text">字义与造字法</div>
+                    <div class="tab-text">字义分析</div>
                 </button>
                 <button class="level-tab" data-level="l4">
                     <div class="tab-num">L4</div>
@@ -2989,18 +3001,33 @@
         // ==================== COMPONENT PARSER ====================
         function parseComponents(answer) {
             const components = [];
-            // Match patterns like: 1. 构件X：功能=...；演变类型=...；解释=...
-            const regex = /(?:\d+)[\.\s]*构件\s*([^：:]+)[：:]\s*功能=([^；;]+)[；;]\s*演变类型=([^；;]+)[；;]\s*解释=([^；;\n]+)/g;
+            // Match both the older format with evolution and the cleaner L2 format without it.
+            const regex = /(?:\d+)[\.\s]*构件\s*([^：:]+)[：:]\s*功能[=为]([^；;]+)[；;]\s*(?:演变类型[=为]([^；;]+)[；;]\s*)?解释[=为]([^；;\n]+)/g;
             let match;
             while ((match = regex.exec(answer)) !== null) {
                 components.push({
                     name: match[1].trim(),
                     function: match[2].trim(),
-                    evolution: match[3].trim(),
+                    evolution: match[3] ? match[3].trim() : '',
                     explanation: match[4].trim()
                 });
             }
             return components;
+        }
+
+        function renderComponentAnswer(answer) {
+            const components = parseComponents(answer);
+            if (components.length === 0) return highlightAnswer(answer, 'components');
+            return `
+                <div class="component-answer-lines">
+                    ${components.map((c, i) => `
+                        <div class="component-answer-line">
+                            ${i + 1}. <span class="component-answer-name">构件「${c.name}」</span>
+                            承担${highlightAnswer(c.function, 'components')}功能，${c.evolution ? `其形体经历${c.evolution}，` : ''}${c.explanation}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
 
         function renderComponentPanel(ex, cardIndex) {
@@ -3016,7 +3043,7 @@
                 <div class="component-detail" id="comp-detail-${cardIndex}-${i}">
                     <div class="detail-row"><span class="detail-label">构件</span><span>${c.name}</span></div>
                     <div class="detail-row"><span class="detail-label">功能</span><span class="hl-component">${c.function}</span></div>
-                    <div class="detail-row"><span class="detail-label">演变</span><span>${c.evolution}</span></div>
+                    ${c.evolution ? `<div class="detail-row"><span class="detail-label">演变</span><span>${c.evolution}</span></div>` : ''}
                     <div class="detail-row"><span class="detail-label">解释</span><span>${c.explanation}</span></div>
                 </div>
             `).join('');
@@ -3052,9 +3079,10 @@
                 const questionHtml = isL1
                     ? `<div class="demo-question qa-line"><span class="qa-label">Q</span><span class="qa-text">${ex.question}</span></div>`
                     : `<div class="demo-question">${ex.question}</div>`;
+                const displayAnswer = ex.task === 'components' ? renderComponentAnswer(ex.answer) : highlightAnswer(ex.answer, ex.task);
                 const answerHtml = isL1
                     ? `<div class="demo-answer qa-line"><span class="qa-label">A</span><span class="qa-text">${highlightAnswer(ex.answer, ex.task)}</span></div>`
-                    : `<div class="demo-answer">${highlightAnswer(ex.answer, ex.task)}</div>`;
+                    : `<div class="demo-answer">${displayAnswer}</div>`;
                 let stagesHtml = '';
                 if (hasStages) {
                     stagesHtml = ex.stages.map((s, si) => {
