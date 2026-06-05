@@ -16,6 +16,23 @@
   </a>
 </p>
 
+## 🚨 Reviewer Quick Access: Supplementary Material
+
+> **For ACM MM reviewers:** please check the supplementary file first.
+
+<p align="center">
+  <a href="https://github.com/Ran00w/JieZi/raw/refs/heads/main/docs/supplementary_material.pdf">
+    <img src="https://img.shields.io/badge/Supplementary%20Material-OPEN%20PDF%20NOW-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Open Supplementary PDF" />
+  </a>
+</p>
+
+| Item | Access |
+| --- | --- |
+| 📄 Supplementary Material (PDF) | [**Click to Download**](https://github.com/Ran00w/JieZi/raw/refs/heads/main/docs/supplementary_material.pdf) |
+| 📌 Repo Path | `docs/supplementary_material.pdf` |
+
+---
+
 ## 📌 News
 
 | Date | Update |
@@ -40,23 +57,6 @@ Ancient Chinese Character Exegesis (ACCE) is organized into four progressive lev
 | L2: Glyph-Form Analysis | Analyze structures, components, component functions, and formation principles. | `path/to/l2_example.png` | **Q:** Fill in a Level-2 question here.<br>**A:** Fill in the answer here. |
 | L3: Meaning Exegesis | Explain the original meaning and semantic motivation of the glyph. | `path/to/l3_example.png` | **Q:** Fill in a Level-3 question here.<br>**A:** Fill in the answer here. |
 | L4: Diachronic Evolution Analysis | Compare historical forms and explain how the character evolved across script stages. | `path/to/l4_example.png` | **Q:** Fill in a Level-4 question here.<br>**A:** Fill in the answer here. |
-
-## 🚨 Reviewer Quick Access: Supplementary Material
-
-> **For ACM MM reviewers:** please check the supplementary file first.
-
-<p align="center">
-  <a href="https://github.com/Ran00w/JieZi/raw/refs/heads/main/docs/supplementary_material.pdf">
-    <img src="https://img.shields.io/badge/Supplementary%20Material-OPEN%20PDF%20NOW-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Open Supplementary PDF" />
-  </a>
-</p>
-
-| Item | Access |
-| --- | --- |
-| 📄 Supplementary Material (PDF) | [**Click to Download**](https://github.com/Ran00w/JieZi/raw/refs/heads/main/docs/supplementary_material.pdf) |
-| 📌 Repo Path | `docs/supplementary_material.pdf` |
-
----
 
 
 <p align="center">
@@ -144,5 +144,4 @@ This repository and the dataset are released under [CC BY-NC-ND 4.0](https://cre
 ## ©️ Copyright
 
 - This repository can only be used for non-commercial research purposes.
-- For commercial use, please contact Prof. Lianwen Jin (eelwjin@scut.edu.cn).
 - Copyright 2026, Deep Learning and Vision Computing Lab (DLVC-Lab), South China University of Technology.
